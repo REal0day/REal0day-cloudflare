@@ -1,0 +1,387 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> Creating Yara Rules for Malware Detection | REal0day's Blog </title> <meta name="author" content="Chris Magistrado"> <meta name="description" content="Tutorial on Creating Yara Rules"> <meta name="keywords" content="cybersecurity, hackers, hacking, information security, infosec, cyber, vulnerability research, security research, 0day, zero day, exploit"> <link rel="stylesheet" href="/assets/css/bootstrap.min.css?a4b3f509e79c54a512b890d73235ef04"> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="/assets/css/academicons.min.css?f0b7046b84e425c55f3463ac249818f5"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%F0%9F%8E%99%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?d41d8cd98f00b204e9800998ecf8427e"> <link rel="canonical" href="https://real0day.github.io//blog/2018/creating-yara-rules/"> <script src="/assets/js/theme.js?9a0c749ec5240d9cda97bc72359a72c0"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>initTheme();</script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> REal0day's Blog </a> <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse text-right" id="navbarNav"> <ul class="navbar-nav ml-auto flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">about </a> </li> <li class="nav-item active"> <a class="nav-link" href="/blog/">blog </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">publications </a> </li> <li class="nav-item "> <a class="nav-link" href="/projects/">projects </a> </li> <li class="nav-item "> <a class="nav-link" href="/repositories/">repositories </a> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">cv </a> </li> <li class="nav-item "> <a class="nav-link" href="/teaching/">teaching </a> </li> <li class="nav-item"> <button id="search-toggle" title="Search" onclick="openSearchModal()"> <span class="nav-link">ctrl k <i class="ti ti-search"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" title="Change theme"> <i class="ti ti-sun-moon" id="light-toggle-system"></i> <i class="ti ti-moon-filled" id="light-toggle-dark"></i> <i class="ti ti-sun-filled" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">Creating Yara Rules for Malware Detection</h1> <p class="post-meta"> Created in February 12, 2018 </p> <p class="post-tags"> <a href="/blog/2018"> <i class="fa-solid fa-calendar fa-sm"></i> 2018 </a>   ·   <a href="/blog/tag/snort"> <i class="fa-solid fa-hashtag fa-sm"></i> snort</a>   <a href="/blog/tag/hacking"> <i class="fa-solid fa-hashtag fa-sm"></i> hacking</a>   <a href="/blog/tag/yara"> <i class="fa-solid fa-hashtag fa-sm"></i> yara</a>   <a href="/blog/tag/reverse"> <i class="fa-solid fa-hashtag fa-sm"></i> reverse</a>   ·   <a href="/blog/category/blog"> <i class="fa-solid fa-tag fa-sm"></i> blog</a> </p> </header> <article class="post-content"> <div id="markdown-content"> <p><img src="/assets/img/yara-girl.gif" alt="Yara Girl" title="Yara Girl" class="featured-image"></p> <h1 id="introduction">Introduction</h1> <p>We all know it’s way more fun to hack shit than to patch shit. That said, not all employers will be satisfied with a hacker who can only compromise systems. Some companies want security researchers that are able to apply patches based on malware samples/breach data they have collected or have found in the wild.</p> <p><strong>Author Assigned Level</strong>: Newbie or Wannabe</p> <p><strong>Required Skills</strong>: There really aren’t too many skills required for this. The deeper you understand malware anlaysis and reverse engineering, the more capable you’ll be at finding unique ways to catch malware. But this won’t hinder you from writing amazing yara rules. Most of the rules I’ve seen are pretty basic. Most look like a python script that took 5 minutes to write. The skill and detail comes in the analysis. Not in the actual yara rule itself.</p> <ul> <li>GNU Linux</li> <li>Familiar with C syntax (not required, but useful)</li> <li>Regex (not required, but useful)</li> </ul> <p><strong>Disclaimer</strong>: I learned yara on the streets, not in the schools. I have about 30hrs expereince with yara. A weekend for me.</p> <h1 id="the-paper">The Paper</h1> <p>I’ll be going over the following:</p> <ol> <li><strong>Rule Identifiers</strong></li> <li><strong>Yara Keywords</strong></li> <li> <strong>Strings</strong> <ul> <li>Hexadecimal</li> <li>Text Strings</li> <li>String Modifiers</li> <li>Regular Expressions</li> <li>Sets of Strings</li> <li>Anonymous Strings</li> </ul> </li> <li> <strong>Conditions</strong> <ul> <li>Boolean</li> <li>Counting String Instances</li> <li>String Offsets or Virtual Addresses</li> <li>Match Length</li> <li>File Size</li> <li>Executable <code class="language-plaintext highlighter-rouge">entry_point</code> </li> <li>Accessing Data at a Given Position</li> <li>Applying One Condition Across Many Strings</li> <li>Iterating Over String Occurrences</li> </ul> </li> <li><strong>Referencing Other Rules</strong></li> <li> <strong>Yara Essentials</strong> <ul> <li>Global Rules</li> <li>Private Rules</li> <li>Rule Tags</li> <li>Metadata</li> <li>Using Modules</li> <li>Undefined Values</li> <li>External/Argument Values</li> <li>Including Files</li> </ul> </li> <li><strong>Private Rules</strong></li> <li><strong>Rule Tags</strong></li> <li><strong>Metadata</strong></li> <li><strong>Using Modules</strong></li> <li><strong>Undefined Values</strong></li> <li><strong>External/Argument Values</strong></li> <li><strong>Including Files</strong></li> </ol> <p>Let’s get started. I want to do something else tonight besides just doc.</p> <h2 id="writing-yara-rules">Writing Yara Rules</h2> <p>Yara mostly resembles the syntax of the C language. Here is a simple rule that does nothing:</p> <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">rule</span> <span class="n">HelloRule</span> <span class="p">{</span>
+    <span class="nl">condition:</span>
+        <span class="nb">false</span>
+<span class="p">}</span>
+</code></pre></div></div> <hr> <h2 id="rule-identifiers">Rule Identifiers</h2> <p>The word the follows rule, in this case “dummy”, is known as the rule identifier. They can be:</p> <ul> <li>alphanumeric characters</li> <li>underscore character</li> <li>first char can’t be a digit</li> <li>case-sensitive</li> <li>cannot exceed 128 characters</li> </ul> <h2 id="yara-keywords">Yara Keywords</h2> <p>The following can’t be used as a rule identifier because they’re special to the yara language.</p> <ul> <li>all</li> <li>and</li> <li>any</li> <li>ascii</li> <li>at</li> <li>condition</li> <li>contains</li> <li>entrypoint</li> <li>false</li> <li>filesize</li> <li>fullword</li> <li>for</li> <li>global</li> <li>in</li> <li>import</li> <li>include</li> <li>int8</li> <li>int16</li> <li>int32</li> <li>int8be</li> <li>int16be</li> <li>int32be</li> <li>matches</li> <li>meta</li> <li>nocase</li> <li>not</li> <li>or</li> <li>of</li> <li>private</li> <li>rule</li> <li>strings</li> <li>them</li> <li>true</li> <li>uint8</li> <li>uint16</li> <li>uint32</li> <li>uint8be</li> <li>uint16be</li> <li>uint32be</li> <li>wide</li> </ul> <p>Generally, yara has two sections: **strings definition **and condition.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rule HelloRule2    // This is an example
+<span class="o">{</span>
+    strings:
+        <span class="nv">$my_text_string</span> <span class="o">=</span> <span class="s2">"text here"</span>
+        <span class="nv">$my_hex_string</span> <span class="o">=</span> <span class="o">{</span> E2 34 A1 C8 23 FB <span class="o">}</span>
+
+    condition:
+        <span class="nv">$my_text_string</span> or <span class="nv">$my_hex_string</span>
+<span class="o">}</span>
+</code></pre></div></div> <p>This rule will be active when either string is found. As you can see, you can also add comments.</p> <h2 id="hexadecimal-strings">Hexadecimal Strings</h2> <h3 id="wildcards">Wildcards</h3> <p>Acceptable uses for hex-strings are wildcards, which are represented with a <code class="language-plaintext highlighter-rouge">?</code> mark.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rule GambitWildcard
+<span class="o">{</span>
+    strings:
+       <span class="nv">$hex_string</span> <span class="o">=</span> <span class="o">{</span> EF 44 ?? D8 A? FB <span class="o">}</span>
+
+    condition:
+       <span class="nv">$hex_string</span>
+<span class="o">}</span>
+</code></pre></div></div> <p>This will catch any of the following:</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>EF 44 01 D8 AA FB
+EF 44 AA D8 AB FB
+</code></pre></div></div> <h3 id="unknown-length-of-wildcard">Unknown Length of Wildcard</h3> <p>Strings with an unknown length can be represented as the following:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rule MarioJump
+<span class="o">{</span>
+        strings:
+           <span class="nv">$hex_string</span> <span class="o">=</span> <span class="o">{</span> F4 23 <span class="o">[</span>4-6] 62 B4 <span class="o">}</span>
+
+        condition:
+           <span class="nv">$hex_string</span>
+<span class="o">}</span>
+</code></pre></div></div> <p>This will catch any of the following:</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>F4 23 01 02 03 04 62 B4
+F4 23 AA BB CC DD EE FF 62 B4
+</code></pre></div></div> <p><strong>Infinite</strong> is also possible.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rule BuzzLightyear
+<span class="o">{</span>
+        strings:
+           <span class="nv">$hex_string</span> <span class="o">=</span> <span class="o">{</span> F4 23 <span class="o">[</span>-] 62 B4 <span class="o">}</span>
+
+        condition:
+           <span class="nv">$hex_string</span>
+<span class="o">}</span>
+</code></pre></div></div> <p>This will catch any of the following:</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>F4 23 AA FF 62 B4
+F4 23 AA AA AA AA AA...FF FF 62 B4
+</code></pre></div></div> <h2 id="conditional-strings">Conditional Strings</h2> <p>You can create 1 to as many statements as you like.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rule WorriedRabbit
+<span class="o">{</span>
+    strings:
+       <span class="nv">$hex_string</span> <span class="o">=</span> <span class="o">{</span> BA 21 <span class="o">(</span> DA BC | C6 <span class="o">)</span> A5 <span class="o">}</span>
+
+    condition:
+       <span class="nv">$hex_string</span>
+<span class="o">}</span>
+</code></pre></div></div> <p>This will catch any of the following:</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>BA 21 DA BC A5
+BA 21 C6 A5
+</code></pre></div></div> <h3 id="mixing-it-all-up">Mixing it all up</h3> <p>You can also combine them all, of course.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rule WorriedGabmitLightyearJump
+<span class="o">{</span>
+    strings:
+       <span class="nv">$hex_string</span> <span class="o">=</span> <span class="o">{</span> BA ?? <span class="o">(</span> DA <span class="o">[</span>2-4] | C6 <span class="o">)</span> A5 <span class="o">}</span>
+
+    condition:
+       <span class="nv">$hex_string</span>
+<span class="o">}</span>
+</code></pre></div></div> <p>This will catch any of the following:</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>BA 01 DA 01 02 03 04 A5
+BA AA C6 A5
+BA FF DA 01 02 A5
+</code></pre></div></div> <h2 id="text-strings">Text Strings</h2> <p>An alternative to hex-strings, one can also use text strings.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rule KimPossible
+<span class="o">{</span>
+    strings:
+        <span class="nv">$alert_string</span> <span class="o">=</span> <span class="s2">"Whats the Sitch"</span>
+
+    condition:
+       <span class="nv">$alert_string</span>
+<span class="o">}</span>
+</code></pre></div></div> <p>One can also use the following escape sequences, just like in C:</p> <ul> <li> <code class="language-plaintext highlighter-rouge">*\</code> **Double Quotes</li> <li> <code class="language-plaintext highlighter-rouge">**</code> Backslash</li> <li> <code class="language-plaintext highlighter-rouge">\t</code> Horizontal Tab</li> <li> <code class="language-plaintext highlighter-rouge">\n</code> New line</li> <li> <code class="language-plaintext highlighter-rouge">\xdd</code> Any byte in hexadecimal notation</li> </ul> <h2 id="modifiers">Modifiers</h2> <h3 id="case-insensitive-strings">Case-insensitive strings</h3> <p>By default, Yara is case-sensitive, but you can turn that off.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rule ThickSkin
+<span class="o">{</span>
+    strings:
+        <span class="nv">$strong_string</span> <span class="o">=</span> <span class="s2">"Iron"</span> nocase
+
+    condition:
+        <span class="nv">$strong_string</span>
+<span class="o">}</span>
+</code></pre></div></div> <h3 id="wide-character-strings">Wide-character strings</h3> <p>The wide modifer can be used to search for strings encoded with two bytes per character, something typically in many executable binaries. If the string “FatTony” appears encoded as two bytes per character, it will be caught if we use the modifer wide. Let’s also add the nocase modifier as “FatTony” might be “fattony” and we wouldn’t want to miss that.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rule FatTony
+<span class="o">{</span>
+    strings:
+        <span class="nv">$fat_villain</span> <span class="o">=</span> <span class="s2">"FatTony"</span> wide nocase
+
+    condition:
+        <span class="nv">$fat_villain</span>
+<span class="o">}</span>
+</code></pre></div></div> <p><strong>[!] Important [!]</strong> - Keep in mind that this modifier interleaves the <code class="language-plaintext highlighter-rouge">ASCII</code> codes of the characters in the string with zeroes, it does not support truly UTF-16 strings containing non-English characters. To add a search for strings in both <code class="language-plaintext highlighter-rouge">ASCII</code> and <code class="language-plaintext highlighter-rouge">wide</code>, use the following:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rule ASCIIFatTony
+<span class="o">{</span>
+    strings:
+        <span class="nv">$fat_villain</span> <span class="o">=</span> <span class="s2">"FatTony"</span> wide ascii nocase
+
+    condition:
+        <span class="nv">$fat_villain</span>
+<span class="o">}</span>
+</code></pre></div></div> <p><strong>ASCII is assumed by default</strong> so you don’t have to add ascii if you want to search for FatTony by ascii alone.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rule ASCIIFatTony
+<span class="o">{</span>
+    strings:
+        <span class="nv">$fat_villain</span> <span class="o">=</span> <span class="s2">"FatTony"</span>
+
+    condition:
+        <span class="nv">$fat_villain</span>
+<span class="o">}</span>
+</code></pre></div></div> <p>This works if you want to search without the wide and nocase modifiers.</p> <h3 id="fullwords-modifier">Fullwords Modifier</h3> <p>This modifier will catch on words that DO NOT have prepend and append the word with a character.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rule ShadyDomain
+<span class="o">{</span>
+    strings:
+        <span class="nv">$shady_domain</span> <span class="o">=</span> <span class="s2">"faceebook"</span> fullword
+
+    condition:
+       <span class="nv">$shady_domain</span>
+<span class="o">}</span>
+</code></pre></div></div> <p>This will catch any of the following:</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>www.faceebook.com
+www.myportal.faceebook.com
+https://secure.faceebook.com
+</code></pre></div></div> <p>This will <strong>NOT CATCH</strong> any of the following:</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>www.myfaceebook.com
+thefaceebook.com
+</code></pre></div></div> <p>The difference is that that the fullword is prepended or appended by a <em>special character</em>, not a regular character.</p> <h2 id="regular-expression">Regular Expression</h2> <p>Enclosed in forward slashes instead of double quotes, (like Perl Programming), yara allows for RegEx.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rule RegularShow
+<span class="o">{</span>
+    strings:
+        <span class="nv">$re1</span> <span class="o">=</span> /md5: <span class="o">[</span>0-9a-fA-F]<span class="o">{</span>32<span class="o">}</span>/
+        <span class="nv">$re2</span> <span class="o">=</span> /state: <span class="o">(</span>on|off<span class="o">)</span>/
+
+    condition:
+        <span class="nv">$re1</span> and <span class="nv">$re2</span>
+<span class="o">}</span>
+</code></pre></div></div> <p>This will catch any md5 string it finds, in either state.</p> <p>One can also apply text modifiers such as nocase,** ascii<strong>,</strong> wide<strong>,</strong> **and **fullword **to RegEx as well.</p> <h2 id="metacharacters">Metacharacters</h2> <p>A metacharacter is a character that has a special meaning (instead of a literal meaning) to a computer program. For RegEx, these are the following meanings</p> <ul> <li> <code class="language-plaintext highlighter-rouge">**</code>: Quote the next metacharacter</li> <li> <code class="language-plaintext highlighter-rouge">^</code>: Match the beginning of the file</li> <li> <code class="language-plaintext highlighter-rouge">$</code>: Match the end of the file</li> <li> <code class="language-plaintext highlighter-rouge">|</code>: Alternation</li> <li> <code class="language-plaintext highlighter-rouge">()</code>: Grouping</li> <li> <code class="language-plaintext highlighter-rouge">[]</code>: Bracketed character class</li> </ul> <p>The following quantifiers are also recognized:</p> <ul> <li> <code class="language-plaintext highlighter-rouge">*</code>: Match 0 or more times</li> <li> <code class="language-plaintext highlighter-rouge">+</code>: Match 1 or more times</li> <li> <code class="language-plaintext highlighter-rouge">?</code>: Match 0 or 1 times</li> <li> <code class="language-plaintext highlighter-rouge">{n}</code>: Match exactly n-times</li> <li> <code class="language-plaintext highlighter-rouge">{n, }</code>: Match at least n-times</li> <li> <code class="language-plaintext highlighter-rouge">{ ,m}</code>: Match at most m-times</li> <li> <code class="language-plaintext highlighter-rouge">{n,m}</code>: Match n to m-times</li> </ul> <p>The following escape sequences are recognized:</p> <ul> <li> <code class="language-plaintext highlighter-rouge">\t</code>: Tab (HT, TAB)</li> <li> <code class="language-plaintext highlighter-rouge">\n</code>: New Line (LF, NL)</li> <li> <code class="language-plaintext highlighter-rouge">**\r</code>: **Return (CR)</li> <li> <code class="language-plaintext highlighter-rouge">\f</code>: Form feed (FF)</li> <li> <code class="language-plaintext highlighter-rouge">\a</code>: Alarm bell</li> <li> <code class="language-plaintext highlighter-rouge">\xNN</code>: Character whose ordinal number is the given hexadecimal number</li> </ul> <p>These are the recognized character classes:</p> <ul> <li> <code class="language-plaintext highlighter-rouge">\w</code>: Match a <em>word _character (alphanumeric plus “</em>”)</li> <li> <code class="language-plaintext highlighter-rouge">\W</code>: Match a non-word character</li> <li> <code class="language-plaintext highlighter-rouge">\s</code>: Match a whitespace character</li> <li> <code class="language-plaintext highlighter-rouge">\S</code>: Match a non-whitespace character</li> <li> <code class="language-plaintext highlighter-rouge">**\d</code>: Match a decimal digit character</li> <li> <code class="language-plaintext highlighter-rouge">\D</code>: Match a non-digit character</li> <li> <code class="language-plaintext highlighter-rouge">\b</code>: Match a word boundary</li> <li> <code class="language-plaintext highlighter-rouge">\B</code>: Match except at a word boundary</li> </ul> <h2 id="sets-of-strings">Sets of strings</h2> <p>If the event where you want a certain number of strings from a list to be hit, you can implement the following:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rule MigosPresent
+<span class="o">{</span>
+    strings:
+        <span class="nv">$m1</span> <span class="o">=</span> <span class="s2">"Quavo"</span>
+        <span class="nv">$m2</span> <span class="o">=</span> <span class="s2">"Offset"</span>
+        <span class="nv">$m3</span> <span class="o">=</span> <span class="s2">"Takeoff"</span>
+
+    condition:
+        2 of <span class="o">(</span><span class="nv">$m1</span>,<span class="nv">$m2</span>,<span class="nv">$m3</span><span class="o">)</span>
+<span class="o">}</span>
+</code></pre></div></div> <p>If any of the two Migos members are present, then the Migos are present. You can also use wildcards to represent a set. Used this way, you would use the * wildcard.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rule MigosPresent
+<span class="o">{</span>
+    strings:
+        <span class="nv">$m1</span> <span class="o">=</span> <span class="s2">"Quavo"</span>
+        <span class="nv">$m2</span> <span class="o">=</span> <span class="s2">"Offset"</span>
+        <span class="nv">$m3</span> <span class="o">=</span> <span class="s2">"Takeoff"</span>
+
+    condition:
+        2 of <span class="o">(</span><span class="nv">$m</span><span class="k">*</span><span class="o">)</span>
+<span class="o">}</span>
+</code></pre></div></div> <p>To represent all variables in strings, you can use the them keyword.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rule ThreeRappersPresent
+<span class="o">{</span>
+    strings:
+        <span class="nv">$m1</span> <span class="o">=</span> <span class="s2">"Quavo"</span>
+        <span class="nv">$m2</span> <span class="o">=</span> <span class="s2">"Offset"</span>
+        <span class="nv">$m3</span> <span class="o">=</span> <span class="s2">"Takeoff"</span>
+        <span class="nv">$q1</span> <span class="o">=</span> <span class="s2">"Cardi B"</span>
+
+    condition:
+        3 of them // equivalent to 3 of <span class="o">(</span><span class="nv">$*</span><span class="o">)</span>
+<span class="o">}</span>
+</code></pre></div></div> <p>Any expression that returns a numeric value can be used. Here is an example of the keywords any and **all **being used.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rule Squad
+<span class="o">{</span>
+    strings:
+        <span class="nv">$m1</span> <span class="o">=</span> <span class="s2">"Quavo"</span>
+        <span class="nv">$m2</span> <span class="o">=</span> <span class="s2">"Offset"</span>
+        <span class="nv">$m3</span> <span class="o">=</span> <span class="s2">"Takeoff"</span>
+        <span class="nv">$q1</span> <span class="o">=</span> <span class="s2">"Cardi B"</span>
+
+    condition:
+        3 of them // equivalent to 3 of <span class="o">(</span><span class="nv">$*</span><span class="o">)</span>
+        all of them
+        any of <span class="o">(</span><span class="nv">$*</span><span class="o">)</span> and 2 of <span class="o">(</span><span class="nv">$*</span><span class="o">)</span>    // Fancy way of using any <span class="k">in </span>a rule that requires 3.
+<span class="o">}</span>
+</code></pre></div></div> <h2 id="anonymous-strings-with-of-and-forof">Anonymous strings with of and for…of</h2> <p>If the event where you are not specifically referencing strings, you can just use $ to reference them all.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rule AnonymousStrings
+<span class="o">{</span>
+    strings:
+        <span class="nv">$ </span><span class="o">=</span> <span class="s2">"dummy1"</span>
+        <span class="nv">$ </span><span class="o">=</span> <span class="s2">"dummy2"</span>
+
+    condition:
+        1 of them
+<span class="o">}</span>
+</code></pre></div></div> <h2 id="conditions">Conditions</h2> <p>Yara allows for boolean expressions via the operators, and, or, and not and relational. Arithmetic operators (+,-,*,,%) and bitwise operators (&amp;, |, «, », ~, ^) can also be used on numerical expressions.</p> <h3 id="boolean">Boolean</h3> <p>String identifiers can also be used within a condition, acting as a Boolean variables whose value depends on the presence or not of the associated string in a file.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rule Example
+<span class="o">{</span>
+    strings:
+        <span class="nv">$hero1a</span> <span class="o">=</span> <span class="s2">"Batman"</span>
+        <span class="nv">$hero1b</span> <span class="o">=</span> <span class="s2">"Robin"</span>
+        <span class="nv">$hero2a</span> <span class="o">=</span> <span class="s2">"Edward"</span>
+        <span class="nv">$hero2b</span> <span class="o">=</span> <span class="s2">"Alphonse"</span>
+
+    condition:
+        <span class="o">(</span><span class="nv">$hero1a</span> or <span class="nv">$hero1b</span><span class="o">)</span> and <span class="o">(</span><span class="nv">$hero2a</span> or <span class="nv">$hero2b</span><span class="o">)</span>
+<span class="o">}</span>
+</code></pre></div></div> <h2 id="counting-string-instances">Counting string instances</h2> <p>Sometimes we need to know not only if a certain string is present or not, but how many times the string appears in the file or process memory. The number of occurrences of each string is represented by a variable whose name is the string identifier but with a # character in place of the $ character. For example:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rule Ransomware
+<span class="o">{</span>
+    strings:
+        <span class="nv">$a</span> <span class="o">=</span> <span class="s2">"encrypted"</span>
+        <span class="nv">$b</span> <span class="o">=</span> <span class="s2">"btc"</span>
+
+    condition:
+        <span class="c">#a == 2 and #b &gt; 2</span>
+<span class="o">}</span>
+</code></pre></div></div> <p>This rule matches any file or process containing the string $a exactly two times, and more than two occurrences of string <code class="language-plaintext highlighter-rouge">$b</code>.</p> <h2 id="string-offsets-or-virtual-addresses">String offsets or virtual addresses</h2> <p>In the majority of cases, when a string identifier is used in a condition, we are willing to know if the associated string is anywhere within the file or process memory, but sometimes we need to know if the string is at some specific offset of the file or at some virtual address within the process address space. In such situtations the operator at is what we need.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rule Offset
+<span class="o">{</span>
+    strings:
+        <span class="nv">$a</span> <span class="o">=</span> <span class="s2">"encrypted"</span>
+        <span class="nv">$b</span> <span class="o">=</span> <span class="s2">"btc"</span>
+
+    condition:
+        <span class="nv">$a</span> at 100 and <span class="nv">$b</span> at 200
+<span class="o">}</span>
+</code></pre></div></div> <p>If string <code class="language-plaintext highlighter-rouge">$a</code> is found at offset 100 within the file (or at virtual address 100 if applied to a running process), it will catch. The string <code class="language-plaintext highlighter-rouge">$b</code> should also be at offset 200. You can also use hexadecimal instead of decimal notation.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rule Offset
+<span class="o">{</span>
+    strings:
+        <span class="nv">$a</span> <span class="o">=</span> <span class="s2">"encrypted"</span>
+        <span class="nv">$b</span> <span class="o">=</span> <span class="s2">"btc"</span>
+
+    condition:
+        <span class="nv">$a</span> at 0x64 and <span class="nv">$b</span> at 0xC8
+<span class="o">}</span>
+</code></pre></div></div> <p>While the at operator is very specific, you can use the **in **operator to specify a range the string can be located at.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rule InExample
+<span class="o">{</span>
+    strings:
+        <span class="nv">$a</span> <span class="o">=</span> <span class="s2">"encrypted"</span>
+        <span class="nv">$b</span> <span class="o">=</span> <span class="s2">"btc"</span>
+
+    condition:
+        <span class="nv">$a</span> <span class="k">in</span> <span class="o">(</span>0..100<span class="o">)</span> and <span class="nv">$b</span> <span class="k">in</span> <span class="o">(</span>100..filesize<span class="o">)</span>
+<span class="o">}</span>
+</code></pre></div></div> <p>String $a must be found at offset between 0-100, while string $b must be at an offset between 100 and the end of the file EOF.</p> <p>You can also get the offset or virtual address of the i-th occurrence of string $a by using @a[ i ]. The indexes are one-based, so the first occurrence would be @a[1], the second being @a[2], and so on. It doesn’t start at @a[0]. If you provide an index greater than the number of occurrences of the string, the result will be a NaN (Not a Number) value.</p> <h2 id="match-length">Match Length</h2> <p>For many regular expressions and hex strings containing jumps, the length of the match is variable. If you have the regular expression /fo*/ the strings “fo”, “foo” and “fooo” can be matches, all of them with a different length.</p> <p>You can use the length of the matches as part of your condition by using the character ! in front of the string identifier, in a similar way you use the @ character for the offset. !a[1] is the length for the first match of $a, !a[2] is the length for the second match, and so on. !a is a abbreviated form of !a[1].</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rule Hak5
+<span class="o">{</span>
+    strings:
+        <span class="nv">$re1</span> <span class="o">=</span> /hack<span class="k">*</span>/    // Will catch on hacker, hacked, hack, hack<span class="k">*</span>
+
+    condition:
+        <span class="o">!</span>re1[1] <span class="o">==</span> 4 and <span class="o">!</span>re1[2] <span class="o">&gt;</span> 6
+<span class="o">}</span>
+</code></pre></div></div> <p>This will catch the following:</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>We hack things. We are hackers.
+</code></pre></div></div> <p>The first instance of ‘hack’ is re1 and it’s equal to length 4. the second instance of ‘hack’ has at least length 6.</p> <h2 id="file-size">File size</h2> <p>String identifiers are not the only variables that can appear in the condition (in fact, rules can be defined without any string definition), there are other special variables that can be used as well. filesize holds the size of the file being scanned. The size is expressed in bytes.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rule FileSizeExample
+<span class="o">{</span>
+    condition:
+       filesize <span class="o">&gt;</span> 200KB
+<span class="o">}</span>
+</code></pre></div></div> <p>We use the KB postfix to set the size in which the file will be caught on to 200KB. It automatically multiples the value of the constant by 1024. The MB postfix can be used to multiply the value by 2^20. Both prefixes can be used only with decimal constants.</p> <p><strong>[!] Important [!]</strong> - filesize **only works when the rule is applied to a file. If applied to a running process, it won’t ever match.</p> <h2 id="executable-entry_point">Executable entry_point</h2> <p>If the file is a <strong>Portable Executable</strong> (PE) or <strong>Executable and Linkable Format</strong> (ELF), this variable holds the raw offset of the executable’s entry point in case we are scanning a file. If we’re scanning a running process, the entry_point will hold the virtual address of the main executable’s entry point. _A typical use of this variable is to look for some pattern at the entry point to detect packers or simple file infectors. _The current way to use entry_point is by importing the lib for PE and/or ELF and use their respective functions. Yara’s entrypoint function is depreciated starting at version 3. This is how it looks pre-version 3.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rule EntryPointExample1
+<span class="o">{</span>
+    strings:
+        <span class="nv">$a</span> <span class="o">=</span> <span class="o">{</span> E8 00 00 00 00 <span class="o">}</span>
+
+    condition:
+       <span class="nv">$a</span> at entrypoint
+<span class="o">}</span>
+
+rule EntryPointExample2
+<span class="o">{</span>
+    strings:
+        <span class="nv">$a</span> <span class="o">=</span> <span class="o">{</span> 9C 50 66 A1 ?? ?? ?? 00 66 A9 ?? ?? 58 0F 85 <span class="o">}</span>
+
+    condition:
+       <span class="nv">$a</span> <span class="k">in</span> <span class="o">(</span>entrypoint..entrypoint + 10<span class="o">)</span>
+<span class="o">}</span>
+</code></pre></div></div> <p><strong>[!] Important [!]</strong> Again, don’t use yara’s entrypoint. Import <code class="language-plaintext highlighter-rouge">PE</code> or <code class="language-plaintext highlighter-rouge">ELF</code> and use <code class="language-plaintext highlighter-rouge">pe.entry_point</code> and/or <code class="language-plaintext highlighter-rouge">elf.entry_point</code>.</p> <h2 id="accessing-data-at-a-given-position">Accessing data at a given position</h2> <p>If you want to read data from a specific offset and save it as a variable you can use one of the following:</p> <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">int8</span><span class="p">(</span><span class="o">&lt;</span><span class="n">offset</span> <span class="n">or</span> <span class="k">virtual</span> <span class="n">address</span><span class="o">&gt;</span><span class="p">)</span>
+<span class="n">int16</span><span class="p">(</span><span class="o">&lt;</span><span class="n">offset</span> <span class="n">or</span> <span class="k">virtual</span> <span class="n">address</span><span class="o">&gt;</span><span class="p">)</span>
+<span class="n">int32</span><span class="p">(</span><span class="o">&lt;</span><span class="n">offset</span> <span class="n">or</span> <span class="k">virtual</span> <span class="n">address</span><span class="o">&gt;</span><span class="p">)</span>
+
+<span class="n">uint8</span><span class="p">(</span><span class="o">&lt;</span><span class="n">offset</span> <span class="n">or</span> <span class="k">virtual</span> <span class="n">address</span><span class="o">&gt;</span><span class="p">)</span>
+<span class="n">uint16</span><span class="p">(</span><span class="o">&lt;</span><span class="n">offset</span> <span class="n">or</span> <span class="k">virtual</span> <span class="n">address</span><span class="o">&gt;</span><span class="p">)</span>
+<span class="n">uint32</span><span class="p">(</span><span class="o">&lt;</span><span class="n">offset</span> <span class="n">or</span> <span class="k">virtual</span> <span class="n">address</span><span class="o">&gt;</span><span class="p">)</span>
+
+<span class="n">int8be</span><span class="p">(</span><span class="o">&lt;</span><span class="n">offset</span> <span class="n">or</span> <span class="k">virtual</span> <span class="n">address</span><span class="o">&gt;</span><span class="p">)</span>
+<span class="n">int16be</span><span class="p">(</span><span class="o">&lt;</span><span class="n">offset</span> <span class="n">or</span> <span class="k">virtual</span> <span class="n">address</span><span class="o">&gt;</span><span class="p">)</span>
+<span class="n">int32be</span><span class="p">(</span><span class="o">&lt;</span><span class="n">offset</span> <span class="n">or</span> <span class="k">virtual</span> <span class="n">address</span><span class="o">&gt;</span><span class="p">)</span>
+
+<span class="n">uint8be</span><span class="p">(</span><span class="o">&lt;</span><span class="n">offset</span> <span class="n">or</span> <span class="k">virtual</span> <span class="n">address</span><span class="o">&gt;</span><span class="p">)</span>
+<span class="n">uint16be</span><span class="p">(</span><span class="o">&lt;</span><span class="n">offset</span> <span class="n">or</span> <span class="k">virtual</span> <span class="n">address</span><span class="o">&gt;</span><span class="p">)</span>
+<span class="n">uint32be</span><span class="p">(</span><span class="o">&lt;</span><span class="n">offset</span> <span class="n">or</span> <span class="k">virtual</span> <span class="n">address</span><span class="o">&gt;</span><span class="p">)</span>
+</code></pre></div></div> <p>Default is little-endian. If you want to read a big-endian integer use the corresponding function ending in be.</p> <p>The <code class="language-plaintext highlighter-rouge">&lt;offset or virtual address&gt;</code> parameter can be any expression returning an unsigned integer, including the return value of one the uintXX functions itself.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rule IsPE
+<span class="o">{</span>
+  condition:
+     // MZ signature at offset 0 and ...
+     uint16<span class="o">(</span>0<span class="o">)</span> <span class="o">==</span> 0x5A4D and
+     // ... PE signature at offset stored <span class="k">in </span>MZ header at 0x3C
+     uint32<span class="o">(</span>uint32<span class="o">(</span>0x3C<span class="o">))</span> <span class="o">==</span> 0x00004550
+<span class="o">}</span>
+</code></pre></div></div> <h2 id="forof-applying-one-condition-across-many-strings">for…of: Applying one condition across many strings</h2> <p>The <strong>boolean_expression</strong> is evaluated for every string in string_set and there must be at least num of them true. One can also exchange num with other keywords such as <strong>all or any</strong>.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for </span>any of <span class="o">(</span><span class="nv">$a</span>,<span class="nv">$b</span>,<span class="nv">$c</span><span class="o">)</span> : <span class="o">(</span> <span class="nv">$ </span>at elf.entry_point  <span class="o">)</span>
+</code></pre></div></div> <p>The <code class="language-plaintext highlighter-rouge">$</code> represents all of the strings in the set. In this example, it’s strings <code class="language-plaintext highlighter-rouge">$a</code>, <code class="language-plaintext highlighter-rouge">$b</code>, and <code class="language-plaintext highlighter-rouge">$c</code>.</p> <p>You can also employ the symbols <code class="language-plaintext highlighter-rouge">#</code> and <code class="language-plaintext highlighter-rouge">@</code> to make reference to the number of occurrences and the first offset of each string.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for </span>all of them : <span class="o">(</span> <span class="c"># &gt; 3 )</span>
+<span class="k">for </span>all of <span class="o">(</span><span class="nv">$a</span><span class="k">*</span><span class="o">)</span> : <span class="o">(</span> @ <span class="o">&gt;</span> @b <span class="o">)</span>
+</code></pre></div></div> <h2 id="iterating-over-string-occurrences">Iterating over string occurrences</h2> <p>If you want to iterate over offsets and test a condition, one can do the following:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rule Three_Peat
+<span class="o">{</span>
+    strings:
+        <span class="nv">$a</span> <span class="o">=</span> <span class="s2">"dummy1"</span>
+        <span class="nv">$b</span> <span class="o">=</span> <span class="s2">"dummy2"</span>
+
+    condition:
+        <span class="k">for </span>all i <span class="k">in</span> <span class="o">(</span>1,2,3<span class="o">)</span> : <span class="o">(</span> @a[i] + 10 <span class="o">==</span> @b[i] <span class="o">)</span>
+<span class="o">}</span>
+</code></pre></div></div> <p>This rule says that the first three occurrences of $b should be 10 bytes away from the first three occurrences of $a. Another way to write this is the following:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for </span>all i <span class="k">in</span> <span class="o">(</span>1..3<span class="o">)</span> : <span class="o">(</span> @a[i] + 10 <span class="o">==</span> @b[i] <span class="o">)</span>
+</code></pre></div></div> <p>We can also use expression as well. In this example, we are iterating over every occurrence of <code class="language-plaintext highlighter-rouge">$a</code> (remember that <code class="language-plaintext highlighter-rouge">#a</code> represents the number of occurrences of <code class="language-plaintext highlighter-rouge">$a</code>). This rule is specifying that every occurrence of <code class="language-plaintext highlighter-rouge">$a</code> should be within the first 100 bytes of the file.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for </span>all i <span class="k">in</span> <span class="o">(</span>1..#a<span class="o">)</span> : <span class="o">(</span> @a[i] &lt; 100 <span class="o">)</span>
+</code></pre></div></div> <p>You can also set it so it’s a set amount of occurrence for the first 100 bytes.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for </span>any i <span class="k">in</span> <span class="o">(</span>1..#a<span class="o">)</span> : <span class="o">(</span> @a[i] &lt; 100 <span class="o">)</span>
+<span class="k">for </span>2 i <span class="k">in</span> <span class="o">(</span>1..#a<span class="o">)</span> : <span class="o">(</span> @a[i] &lt; 100 <span class="o">)</span>
+</code></pre></div></div> <h2 id="referencing-other-rules">Referencing other rules</h2> <p>Just like in C when referencing functions, the function, or in this case the rule, must be defined prior to being used.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rule Rule1
+<span class="o">{</span>
+    strings:
+        <span class="nv">$a</span> <span class="o">=</span> <span class="s2">"dummy1"</span>
+
+    condition:
+        <span class="nv">$a</span>
+<span class="o">}</span>
+
+rule Rule2
+<span class="o">{</span>
+    strings:
+        <span class="nv">$a</span> <span class="o">=</span> <span class="s2">"dummy2"</span>
+
+    condition:
+        <span class="nv">$a</span> and Rule1
+<span class="o">}</span>
+</code></pre></div></div> <h2 id="yara-essentials">Yara Essentials</h2> <h3 id="global-rules">Global Rules</h3> <p>Allows users to impose restrictions in all the rules. If you want all your rules to ignore the files that exceed a certain size limit, you could go rule by rule making the required modifications to their conditions, or just write a global rule like this one:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>global rule SizeLimit
+<span class="o">{</span>
+    condition:
+        filesize &lt; 2MB
+<span class="o">}</span>
+</code></pre></div></div> <p>You can define as many global rules as you want. They’ll run before the other rules.</p> <h3 id="private-rules">Private Rules</h3> <p>Private rules don’t have an output when they match. When paired with referencing other rules, this can allow for a cleaner output. Such that, to get to superMalicious, maybe one private rule is that file must be ELF. Once that is confirmed, then the next rule will execute. But we don’t want to see ELF, in output. We just want to know if it’s superMalicious or not. To create a private rule, just add private in front of rule.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>private rule PrivateRule
+<span class="o">{</span>
+    ...
+<span class="o">}</span>
+</code></pre></div></div> <h3 id="rule-tags">Rule tags</h3> <p>You can tag your rules in case you only want to see the output of type ruleName.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rule TagsExample1 : Foo Bar Baz
+<span class="o">{</span>
+    ...
+<span class="o">}</span>
+
+rule TagsExample2 : Bar
+<span class="o">{</span>
+    ...
+<span class="o">}</span>
+</code></pre></div></div> <h3 id="metadata">Metadata</h3> <p>This allows for additional data to be stored in a rule.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rule MetadataExample
+<span class="o">{</span>
+    meta:
+        my_identifier_1 <span class="o">=</span> <span class="s2">"Some string data"</span>
+        my_identifier_2 <span class="o">=</span> 24
+        my_identifier_3 <span class="o">=</span> <span class="nb">true
+
+    </span>strings:
+        <span class="nv">$my_text_string</span> <span class="o">=</span> <span class="s2">"text here"</span>
+        <span class="nv">$my_hex_string</span> <span class="o">=</span> <span class="o">{</span> E2 34 A1 C8 23 FB <span class="o">}</span>
+
+    condition:
+        <span class="nv">$my_text_string</span> or <span class="nv">$my_hex_string</span>
+<span class="o">}</span>
+</code></pre></div></div> <h3 id="using-modules">Using Modules</h3> <p>Some modules are officially distributed with YARA like PE and Cuckoo. They can be imported just like python, but add double quotes.</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="sh">"</span><span class="s">pe</span><span class="sh">"</span>
+<span class="k">import</span> <span class="sh">"</span><span class="s">cuckoo</span><span class="sh">"</span>
+</code></pre></div></div> <p>Once imported, you can use the feature by using its name prior to the function.</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pe</span><span class="p">.</span><span class="n">entry_point</span> <span class="o">==</span> <span class="mh">0x1000</span>
+<span class="n">cuckoo</span><span class="p">.</span><span class="nf">http_request</span><span class="p">(</span><span class="o">/</span><span class="n">someregexp</span><span class="o">/</span><span class="p">)</span>
+</code></pre></div></div> <h3 id="undefined-values">Undefined Values</h3> <p>Some values are left as undefined when they are ran. If the following rule executes on a file that’s of type ELF but it finds the string, it will result in something like TRUE &amp; Undefined.</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="sh">"</span><span class="s">pe</span><span class="sh">"</span>
+
+<span class="n">rule</span> <span class="n">Test</span>
+<span class="p">{</span>
+  <span class="n">strings</span><span class="p">:</span>
+      <span class="err">$</span><span class="n">a</span> <span class="o">=</span> <span class="sh">"</span><span class="s">some string</span><span class="sh">"</span>
+
+  <span class="n">condition</span><span class="p">:</span>
+      <span class="err">$</span><span class="n">a</span> <span class="ow">and</span> <span class="n">pe</span><span class="p">.</span><span class="n">entry_point</span> <span class="o">==</span> <span class="mh">0x1000</span>
+<span class="p">}</span>
+</code></pre></div></div> <p>Be careful.</p> <h3 id="external-variables">External Variables</h3> <p>External variables allow you to define rules which depend on values provided from ‘the other side’.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rule ExternalVariable1
+<span class="o">{</span>
+    condition:
+       ext_var <span class="o">==</span> 10
+<span class="o">}</span>
+</code></pre></div></div> <p>ext_var is an external variable whos value is assigned at runtime, (use -d on the command line and parameter of <strong>compile</strong> and match methods in yara-python). External variables could be of types: int, str, or boolean.</p> <p>External variables can be used with the operators: contains and <strong>matches</strong>. Contains returns true if the string contains the specified substring. <strong>Matches</strong> returns true if the string matches the given <strong>regular expression</strong>.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rule ExternalVariable2
+<span class="o">{</span>
+    condition:
+        string_ext_var contains <span class="s2">"text"</span>
+<span class="o">}</span>
+
+rule ExternalVariable3
+<span class="o">{</span>
+    condition:
+        string_ext_var matches /[a-z]+/
+<span class="o">}</span>
+</code></pre></div></div> <p>**Contains **is True for ExternalVariable2 and matches is True for ExternalVariable3</p> <p>You can also use regex modifiers along with the matches operator.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rule ExternalVariableExample5
+<span class="o">{</span>
+    condition:
+        /<span class="k">*</span> <span class="k">case</span> insensitive single-line mode <span class="k">*</span>/
+        string_ext_var matches /[a-z]+/is
+<span class="o">}</span>
+</code></pre></div></div> <p>This will match for case-insensitive due to the i.</p> <p>Remember, you must define all external variables at run-time. This can be done with the **-d **argument.</p> <h3 id="including-files">Including files</h3> <p>Of course, you can include other files in yara, using the C-type import, #include…but without the # and with double quotes. You can use relative paths, absolute paths, and if windows, paths with drives.</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">include</span> <span class="sh">"</span><span class="s">Migos.yar</span><span class="sh">"</span>
+<span class="n">include</span> <span class="sh">"</span><span class="s">../CardiB.yar</span><span class="sh">"</span>
+<span class="n">include</span> <span class="sh">"</span><span class="s">/home/user/yara/IsRapper.yar</span><span class="sh">"</span>
+<span class="n">include</span> <span class="sh">"</span><span class="s">c:</span><span class="se">\\</span><span class="s">yara</span><span class="se">\\</span><span class="s">includes</span><span class="se">\\</span><span class="s">oldRappers.yar</span><span class="sh">"</span>
+<span class="n">include</span> <span class="sh">"</span><span class="s">c://yara/includes/oldRappers.yar</span><span class="sh">"</span>
+</code></pre></div></div> <h1 id="conclusions">Conclusions</h1> <p>Alright, now you know how to write some Yara Rules. Here’s some malware repos, rules, and tools that allow you to generate yara rules. If you install yarGen, just point it at the malware, and it will the write a signature for that malware. If you want to catch a family of malware, it’s better to generalize it across the entire family.</p> <h2 id="resources">Resources</h2> <h3 id="worm-descriptions">Worm Descriptions</h3> <ul> <li><a href="https://www.f-secure.com/v-descs/worm_w32_downadup_al.shtml" rel="external nofollow noopener" target="_blank">F-Secure: Worm W32 Downadup AL</a></li> <li><a href="https://www.f-secure.com/v-descs/worm_w32_downadup.shtml" rel="external nofollow noopener" target="_blank">F-Secure: Worm W32 Downadup</a></li> <li><a href="https://support.microsoft.com/en-us/help/962007/virus-alert-about-the-win32-conficker-worm" rel="external nofollow noopener" target="_blank">Microsoft Support: Win32 Conficker Worm Alert</a></li> <li><a href="https://www.f-secure.com/v-descs/worm_w32_downadup_a.shtml" rel="external nofollow noopener" target="_blank">F-Secure: Worm W32 Downadup A</a></li> <li><a href="https://www.f-secure.com/v-descs/worm_w32_downadup_gen.shtml" rel="external nofollow noopener" target="_blank">F-Secure: Worm W32 Downadup Gen</a></li> <li><a href="https://www.f-secure.com/v-descs/worm_w32_downaduprun_a.shtml" rel="external nofollow noopener" target="_blank">F-Secure: Worm W32 DownadupRun A</a></li> </ul> <h3 id="yara">Yara</h3> <ul> <li><a href="https://www.experts-exchange.com/questions/29042297/How-to-test-yara-rule.html" rel="external nofollow noopener" target="_blank">Experts Exchange: How to Test Yara Rules</a></li> <li><a href="https://www.securityartwork.es/2013/10/11/yara-101/" rel="external nofollow noopener" target="_blank">Security Artwork: Yara 101</a></li> <li><a href="https://stixproject.github.io/documentation/idioms/yara-test-mechanism/" rel="external nofollow noopener" target="_blank">STIX Project: Yara Test Mechanism</a></li> <li><a href="https://github.com/Neo23x0/yarGen" rel="external nofollow noopener" target="_blank">yarGen by Neo23x0</a></li> <li><a href="https://github.com/radare/radare2/blob/master/doc/yara.md" rel="external nofollow noopener" target="_blank">Radare2 Yara Documentation</a></li> <li><a href="https://www.bsk-consulting.de/2015/02/16/write-simple-sound-yara-rules/" rel="external nofollow noopener" target="_blank">BSK Consulting: Writing Simple Yara Rules - Part 1</a></li> <li><a href="https://www.bsk-consulting.de/2015/10/17/how-to-write-simple-but-sound-yara-rules-part-2/" rel="external nofollow noopener" target="_blank">BSK Consulting: Writing Simple Yara Rules - Part 2</a></li> <li><a href="https://www.bsk-consulting.de/2016/04/15/how-to-write-simple-but-sound-yara-rules-part-3/" rel="external nofollow noopener" target="_blank">BSK Consulting: Writing Simple Yara Rules - Part 3</a></li> </ul> <h3 id="xxd">xxd</h3> <ul> <li><a href="https://www.systutorials.com/docs/linux/man/1-xxd/" rel="external nofollow noopener" target="_blank">Linux Man Pages: xxd</a></li> </ul> <h3 id="malware-repos">Malware repos</h3> <ul> <li><a href="https://github.com/Malshare/MalShare-Toolkit.git" rel="external nofollow noopener" target="_blank">MalShare</a></li> </ul> <h3 id="malware-submission">Malware Submission</h3> <ul> <li><a href="https://www.virustotal.com/" rel="external nofollow noopener" target="_blank">VirusTotal</a></li> </ul> </div> </article> <br> <hr> <br> <ul class="list-disc pl-8"></ul> <h2 class="text-3xl font-semibold mb-4 mt-12">Enjoy Reading This Article?</h2> <p class="mb-2">Here are some more articles you might like to read next:</p> <li class="my-2"> <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2024/google-gemini-updates-flash-15-gemma-2-and-project-astra/">Google Gemini updates: Flash 1.5, Gemma 2 and Project Astra</a> </li> <li class="my-2"> <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2024/android-security-enhancements-version-by-version/">Android Security Enhancements, Version by Version</a> </li> <li class="my-2"> <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2024/building-a-centralized-resource-the-mobile-ctf-lab-for-reverse-engineers/">Building a Centralized Resource: The Mobile CTF Lab for Reverse Engineers</a> </li> <li class="my-2"> <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2025/second-talk-with-corellium/">Android Malware Dynamic Analysis with Corellium</a> </li> <li class="my-2"> <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2025/first-corellium-talk/">Winning CTFs with Corellium</a> </li> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2025 Chris Magistrado. None </div> </footer> <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> <script src="/assets/js/bootstrap.bundle.min.js"></script> <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js" type="text/javascript"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/js/zoom.js?85ddb88934d28b74e78031fd54cf8308"></script> <script src="/assets/js/no_defer.js?2781658a0a2b13ed609542042a859126"></script> <script defer src="/assets/js/common.js?e0514a05c5c95ac1a93a8dfd5249b92e"></script> <script defer src="/assets/js/copy_code.js?12775fdf7f95e901d7119054556e495f" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?d9f17b6adc2311cbabd747f4538bb15f"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script type="text/javascript">window.MathJax={tex:{tags:"ams"}};</script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script defer src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6" crossorigin="anonymous"></script> <script type="text/javascript">function progressBarSetup(){"max"in document.createElement("progress")?(initializeProgressElement(),$(document).on("scroll",function(){progressBar.attr({value:getCurrentScrollPosition()})}),$(window).on("resize",initializeProgressElement)):(resizeProgressBar(),$(document).on("scroll",resizeProgressBar),$(window).on("resize",resizeProgressBar))}function getCurrentScrollPosition(){return $(window).scrollTop()}function initializeProgressElement(){let e=$("#navbar").outerHeight(!0);$("body").css({"padding-top":e}),$("progress-container").css({"padding-top":e}),progressBar.css({top:e}),progressBar.attr({max:getDistanceToScroll(),value:getCurrentScrollPosition()})}function getDistanceToScroll(){return $(document).height()-$(window).height()}function resizeProgressBar(){progressBar.css({width:getWidthPercentage()+"%"})}function getWidthPercentage(){return getCurrentScrollPosition()/getDistanceToScroll()*100}const progressBar=$("#progress");window.onload=function(){setTimeout(progressBarSetup,50)};</script> <script src="/assets/js/vanilla-back-to-top.min.js?f40d453793ff4f64e238e420181a1d17"></script> <script>addBackToTop();</script> <script type="module" src="/assets/js/search/ninja-keys.min.js?a3446f084dcaecc5f75aa1757d087dcf"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script>let searchTheme=determineComputedTheme();const ninjaKeys=document.querySelector("ninja-keys");"dark"===searchTheme?ninjaKeys.classList.add("dark"):ninjaKeys.classList.remove("dark");const openSearchModal=()=>{const e=$("#navbarNav");e.hasClass("show")&&e.collapse("hide"),ninjaKeys.open()};</script> <script>const ninja=document.querySelector("ninja-keys");ninja.data=[{id:"nav-about",title:"about",section:"Navigation",handler:()=>{window.location.href="/"}},{id:"nav-blog",title:"blog",description:"",section:"Navigation",handler:()=>{window.location.href="/blog/"}},{id:"nav-publications",title:"publications",description:"publications by categories in reversed chronological order. generated by jekyll-scholar.",section:"Navigation",handler:()=>{window.location.href="/publications/"}},{id:"nav-projects",title:"projects",description:"A growing collection of your cool projects.",section:"Navigation",handler:()=>{window.location.href="/projects/"}},{id:"nav-repositories",title:"repositories",description:"Edit the `_data/repositories.yml` and change the `github_users` and `github_repos` lists to include your own GitHub profile and repositories.",section:"Navigation",handler:()=>{window.location.href="/repositories/"}},{id:"nav-cv",title:"cv",description:"",section:"Navigation",handler:()=>{window.location.href="/cv/"}},{id:"nav-teaching",title:"teaching",description:"Materials for courses you taught. Replace this text with your description.",section:"Navigation",handler:()=>{window.location.href="/teaching/"}},{id:"post-android-malware-dynamic-analysis-with-corellium",title:"Android Malware Dynamic Analysis with Corellium",description:"Paid Webinar Engagement",section:"Posts",handler:()=>{window.location.href="/blog/2025/second-talk-with-corellium/"}},{id:"post-winning-ctfs-with-corellium",title:"Winning CTFs with Corellium",description:"Paid Webinar Engagement",section:"Posts",handler:()=>{window.location.href="/blog/2025/first-corellium-talk/"}},{id:"post-hello-skid-post",title:"Hello Skid post",description:"Introduction",section:"Posts",handler:()=>{window.location.href="/blog/2024/first-post/"}},{id:"post-building-a-centralized-resource-the-mobile-ctf-lab-for-reverse-engineers",title:'Building a Centralized Resource: The Mobile CTF Lab for Reverse Engineers <svg width="1.2rem" height="1.2rem" top=".5rem" viewbox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',description:"",section:"Posts",handler:()=>{window.open("https://medium.com/@real0day/building-a-centralized-resource-the-mobile-ctf-lab-for-reverse-engineers-fdf1fb3e1dcf?source=rss-428dddd93382------2","_blank")}},{id:"post-android-security-enhancements-version-by-version",title:'Android Security Enhancements, Version by Version <svg width="1.2rem" height="1.2rem" top=".5rem" viewbox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',description:"",section:"Posts",handler:()=>{window.open("https://medium.com/@real0day/android-security-enhancements-version-by-version-df1de5ea8c46?source=rss-428dddd93382------2","_blank")}},{id:"post-google-gemini-updates-flash-1-5-gemma-2-and-project-astra",title:'Google Gemini updates: Flash 1.5, Gemma 2 and Project Astra <svg width="1.2rem" height="1.2rem" top=".5rem" viewbox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',description:"We\u2019re sharing updates across our Gemini family of models and a glimpse of Project Astra, our vision for the future of AI assistants.",section:"Posts",handler:()=>{window.open("https://blog.google/technology/ai/google-gemini-update-flash-ai-assistant-io-2024/","_blank")}},{id:"post-bypassing-aslr-damn-heroes-and-their-defenses",title:"Bypassing ASLR Damn Heroes and their defenses",description:"Tutorial on bypassing ASLR",section:"Posts",handler:()=>{window.location.href="/blog/2023/bypassing-aslr/"}},{id:"post-creating-yara-rules-for-malware-detection",title:"Creating Yara Rules for Malware Detection",description:"Tutorial on Creating Yara Rules",section:"Posts",handler:()=>{window.location.href="/blog/2018/creating-yara-rules/"}},{id:"post-injecting-a-running-process",title:"Injecting a Running Process",description:"Tutorial on how syscall that control processes work",section:"Posts",handler:()=>{window.location.href="/blog/2017/injecting-a-running-process/"}},{id:"post-rekalling-the-times-i-played-with-windows",title:"Rekalling the Times I Played with Windows",description:"Tutorial on how to use rekall to dump windows memory",section:"Posts",handler:()=>{window.location.href="/blog/2017/rekalling-the-times-i-played-with-windows/"}},{id:"post-bypassing-nx-dep",title:"Bypassing NX/DEP",description:"Tutorial I go through bypassing NX/DEP and the history of this security mechanism.",section:"Posts",handler:()=>{window.location.href="/blog/2017/bypassing-nx/"}},{id:"news-a-simple-inline-announcement",title:"A simple inline announcement.",description:"",section:"News"},{id:"news-a-long-announcement-with-details",title:"A long announcement with details",description:"",section:"News",handler:()=>{window.location.href="/blog/2015/announcement_2/"}},{id:"news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",title:'A simple inline announcement with Markdown emoji! <img class="emoji" title=":sparkles:" alt=":sparkles:" src="https://github.githubassets.com/images/icons/emoji/unicode/2728.png" height="20" width="20"> <img class="emoji" title=":smile:" alt=":smile:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png" height="20" width="20">',description:"",section:"News"},{id:"news-upcoming-mobile-hacking-talk-with-dc615-defcon-tennessee",title:"Upcoming Mobile Hacking Talk with DC615 Defcon Tennessee",description:"",section:"News",handler:()=>{window.location.href="/blog/2024/announcement_4/"}},{id:"socials-email",title:"Send email",section:"Socials",handler:()=>{window.open("mailto:%63%68%72%69%73@%72%73%65%63%67%6C%6F%62%61%6C.%63%6F%6D","_blank")}},{id:"socials-github",title:"GitHub",section:"Socials",handler:()=>{window.open("https://github.com/REal0day","_blank")}},{id:"socials-linkedin",title:"LinkedIn",section:"Socials",handler:()=>{window.open("https://www.linkedin.com/in/cmagistrado","_blank")}},{id:"socials-x",title:"X",description:"Twitter",section:"Socials",handler:()=>{window.open("https://twitter.com/REal0day","_blank")}},{id:"socials-medium",title:"Medium",section:"Socials",handler:()=>{window.open("https://medium.com/@REal0day","_blank")}},{id:"socials-work",title:"Work",section:"Socials",handler:()=>{window.open("https://TopClearedRecruiting.com","_blank")}},{id:"socials-spotify",title:"Spotify",section:"Socials",handler:()=>{window.open("https://open.spotify.com/user/5BgjVtDJc7xoyiQlbhKmL6","_blank")}},{id:"socials-instagram",title:"Instagram",section:"Socials",handler:()=>{window.open("https://instagram.com/AdventureGod","_blank")}},{id:"socials-youtube",title:"YouTube",section:"Socials",handler:()=>{window.open("https://youtube.com/@HackersToFounders","_blank")}},{id:"socials-rss",title:"RSS Feed",section:"Socials",handler:()=>{window.open("/feed.xml","_blank")}},{id:"light-theme",title:"Change theme to light",description:"Change the theme of the site to Light",section:"Theme",handler:()=>{setThemeSetting("light")}},{id:"dark-theme",title:"Change theme to dark",description:"Change the theme of the site to Dark",section:"Theme",handler:()=>{setThemeSetting("dark")}},{id:"system-theme",title:"Use system default theme",description:"Change the theme of the site to System Default",section:"Theme",handler:()=>{setThemeSetting("system")}}];</script> <script src="/assets/js/shortcut-key.js?6f508d74becd347268a7f822bca7309d"></script> </body> </html>
